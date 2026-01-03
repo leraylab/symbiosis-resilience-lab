@@ -1,0 +1,658 @@
+/* === GOOGLE FONT IMPORT === */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+/* === BASE === */
+body {
+  font-family: 'Balsamiq Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #293d58;
+  background-color: #f7f0da;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === NAVBAR & LOGO === */
+.navbar {
+  background-color: #293d58 !important;
+  min-height: 90px !important;
+  align-items: center !important;
+  padding: 0.25rem 1rem !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.navbar a,
+.navbar-nav a,
+.navbar-brand {
+  color: #f7f0da !important;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+.navbar a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* === Fix logo sizing and alignment === */
+.navbar .navbar-brand img,
+.navbar-brand img {
+  height: 85px !important;     /* Larger logo */
+  width: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin-top: -8px !important; /* vertically centered */
+  margin-bottom: -8px !important;
+  margin-right: 12px !important;
+}
+
+/* Ensure navbar adapts if logo is taller */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* === FULL-WIDTH PARALLAX BANNER === */
+.banner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 420px;
+  background-image: url("Images/Coral-banner.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(41, 61, 88, 0.55); /* overlay with brand blue tint */
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 1.5s ease both;
+}
+
+/* === BANNER TITLE & TAGLINE === */
+.banner-title {
+  color: #f7f0da !important;
+  font-size: clamp(3rem, 7vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* === BANNER LOGO === */
+.banner-logo {
+  width: clamp(100px, 20vw, 180px);  /* responsive size: 160–300px */
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); /* subtle shadow for contrast */
+  animation: fadeInUp 1.5s ease both;
+}
+
+.banner .tagline {
+  color: #ffffff !important;
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  font-weight: 400;
+  margin-top: 1rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === TEAM PAGE GRID === */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.team-member {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 340px;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.team-member h3 {
+  color: #293d58;
+  margin: 0.5rem 0 0.3rem 0;
+  font-size: 1.15rem;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+/* === SOCIAL ICONS === */
+.team-member a img {
+  width: 25px;
+  height: 25px;
+  margin: 0.25rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.team-member a img:hover {
+  transform: scale(1.1);
+  opacity: 0.95;
+}
+
+/* === INSTAGRAM SECTION === */
+.instagram-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-top: 3px solid #293d58;
+  background-color: #f7f0da;
+}
+
+.instagram-section h3 {
+  color: #293d58;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.embedsocial-hashtag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.feed-powered-by-es {
+  display: none !important;
+}
+
+/* === NAVBAR TEXT SIZE, COLOR, AND SPACING === */
+.navbar-nav .nav-link,
+.navbar a.nav-link,
+.navbar a,
+.navbar .navbar-nav > li > a {
+  font-size: 1.3rem !important;    /* adjust 1.1–1.3rem for desired size */
+  font-weight: 700 !important;     /* stronger, matches Balsamiq Sans look */
+  color: #f7f0da !important;       /* your cream tone */
+  letter-spacing: 0.5px;
+  text-transform: none;
+  padding: 0.6rem 1rem !important; /* add breathing room */
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar .nav-link:hover {
+  color: #ffffff !important;       /* hover = white */
+  text-decoration: underline;
+}
+
+/* Center-align links vertically beside logo */
+.navbar-nav {
+  align-items: center !important;
+}
+
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* === HOME PAGE SECTION BACKGROUNDS === */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  border-bottom: 3px solid #f7f0da;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+
+.light-section {
+  background-color: #f7f0da; /* soft beige tone matching your palette */
+  color: #293d58;
+}
+
+.dark-section {
+  background-color: #293d58; /* navy tone */
+  color: #f7f0da;
+}
+
+.section h2, 
+.section h3 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.section p {
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.section a.button {
+  display: inline-block;
+  background-color: #f7f0da;
+  color: #293d58;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.section a.button:hover {
+  background-color: #ffffff;
+  color: #293d58;
+}
+
+/* === FULL-WIDTH LAYOUT === */
+:root {
+  --content-max-width: 1600px;
+}
+
+.page-columns .content {
+  max-width: var(--content-max-width) !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.page-content,
+main.content,
+.content {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main.content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* === HIDE TITLE BLOCK ON HOME === */
+body.home #title-block-header,
+body.home .quarto-title-block,
+body.home h1.title,
+body.home .page-title {
+  display: none !important;
+}
+
+body.home main.content {
+  padding-top: 0 !important;
+}
+
+/* === FINAL CLEAN FIX: LARGE HKU LOGO, RESPONSIVE NAVBAR === */
+
+/* Logo sizing and positioning */
+.navbar img.navbar-logo {
+  height: 95px !important;          /* Adjust 85–100px as needed */
+  width: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  margin-right: 12px !important;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: #293d58 !important;
+  min-height: 100px !important;     /* ensures it fits the logo */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar text */
+.navbar a,
+.navbar-nav a,
+.navbar-brand {
+  color: #f7f0da !important;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+.navbar a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Responsive: smaller logo on tablets & phones */
+@media (max-width: 992px) {
+  .navbar img.navbar-logo {
+    height: 75px !important;
+    margin-top: -8px !important;
+    margin-bottom: -8px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar img.navbar-logo {
+    height: 60px !important;
+    margin-top: -6px !important;
+    margin-bottom: -6px !important;
+  }
+}
+
+/* === FINAL ABSOLUTE FIX FOR NAVBAR LOGO SIZE === */
+.navbar .navbar-logo {
+  height: 95px !important;           /* Try 85–100px to taste */
+  width: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  margin-right: 12px !important;
+}
+
+/* Also force Quarto's navbar-brand wrapper to respect this */
+.navbar .navbar-brand {
+  height: 100px !important;
+  line-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* And make sure no theme rule shrinks it */
+.navbar .navbar-brand img,
+.navbar img {
+  max-height: none !important;
+}
+
+/* Keep navbar background and spacing */
+.navbar {
+  background-color: #293d58 !important;
+  min-height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+/* Mobile scaling */
+@media (max-width: 768px) {
+  .navbar .navbar-logo {
+    height: 65px !important;
+    margin-top: -6px !important;
+    margin-bottom: -6px !important;
+  }
+}
+
+.navbar img.navbar-logo {
+  height: 95px !important;
+  width: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  margin-right: 12px !important;
+  vertical-align: middle !important;
+}
+
+.navbar {
+  background-color: #293d58 !important;
+  min-height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.25rem 1rem !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .navbar img.navbar-logo {
+    height: 65px !important;
+  }
+}
+
+/* ---------- Join Us Page Inline Image Styling ---------- */
+
+.join-inline-right,
+.join-inline-left {
+  width: 25%;                 /* small embedded size (~1/4 width) */
+  max-width: 300px;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  object-fit: cover;
+  margin: 0.4rem 0 0.8rem 0;
+}
+
+/* Float alternation */
+.join-inline-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.join-inline-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+/* Clear floats between sections */
+section::after, .page-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Optional small tweak for mobile */
+@media (max-width: 768px) {
+  .join-inline-right,
+  .join-inline-left {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    width: 60%;
+  }
+}
+
+/* === CONSISTENT LEFT TOC / SIDEBAR COLORS === */
+
+/* TOC / sidebar container when toc-location: left */
+.quarto-sidebar,
+.quarto-sidebar-toc,
+.sidebar,
+.sidebar-navigation,
+#quarto-sidebar,
+#quarto-toc-sidebar {
+  background-color: #f7f0da !important;
+  color: #293d58 !important;
+  border-right: none !important;
+}
+
+/* TOC section titles, headings */
+.quarto-sidebar-toc .sidebar-title,
+#quarto-sidebar h2,
+#quarto-toc-sidebar h2 {
+  color: #293d58 !important;
+  font-weight: 700;
+}
+
+/* Links in the TOC - normal state */
+#quarto-sidebar a,
+#quarto-toc-sidebar a,
+.quarto-sidebar-toc a,
+.quarto-sidebar-toc .nav-link,
+#quarto-toc-sidebar .nav-link {
+  color: #293d58 !important;
+  text-decoration: none;
+}
+
+/* Hover + active states (ONLY inside the sidebar/TOC) */
+#quarto-sidebar a:hover,
+#quarto-toc-sidebar a:hover,
+.quarto-sidebar-toc a:hover,
+#quarto-sidebar .nav-link:hover,
+#quarto-toc-sidebar .nav-link:hover,
+.quarto-sidebar-toc .nav-link:hover,
+#quarto-sidebar .active > a,
+#quarto-toc-sidebar .active > a,
+.quarto-sidebar-toc .active > a,
+#quarto-sidebar .nav-link.active,
+#quarto-toc-sidebar .nav-link.active,
+.quarto-sidebar-toc .nav-link.active {
+  color: #d4af37 !important;       /* gold hover/active color */
+  text-decoration: underline;
+  background-color: transparent !important;
+}
+
+/* === PROJECTS PAGE: COLLABORATORS GRID === */
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.collab-card {
+  background-color: #f7f0da;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.collab-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.25rem;
+  color: #293d58;
+}
+
+.collab-card p {
+  margin: 0 0 0.75rem;
+}
+
+.collab-link {
+  color: #293d58;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.collab-link:hover {
+  text-decoration: underline;
+}
+
+/* === Force heading sizes on Projects page === */
+body.projects h2 {
+  font-size: 2.6rem !important;  /* increase as needed */
+  font-weight: 700 !important;
+  color: #293d58 !important;
+  margin-top: 2.5rem !important;
+  border-bottom: 2px solid #e6dcc2 !important;
+  padding-bottom: 0.3rem !important;
+}
+
+body.projects h3 {
+  font-size: 1.6rem !important;  /* increase or decrease */
+  font-weight: 600 !important;
+  color: #293d58 !important;
+  margin-top: 1.5rem !important;
+}
+
+/* === Projects page heading overrides === */
+
+/* Only style the H2 project titles, not their content */
+h2.project-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #293d58;
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #e6dcc2;
+  padding-bottom: 0.3rem;
+}
+
+
+/* Optional: tweak in-section h3 headings (like "Objectives") */
+body.projects h3 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #293d58;
+  margin-top: 1.5rem;
+}
