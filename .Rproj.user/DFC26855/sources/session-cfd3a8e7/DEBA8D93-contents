@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Symbiosis & Resilience Laboratory"
+  navbar:
+    title: false
+    logo: Images/University_of_Hong_Kong-Logo.wine_mod4.png
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Team"
+        href: Team.qmd
+      - text: "Projects"
+        href: Projects.qmd
+      - text: "Publications"
+        href: Publications.qmd
+      - text: "Resources"
+        href: Resources.qmd
+      - text: "Join us"
+        href: Join.qmd
+
+format:
+  html:
+    theme: cosmo
+    css:
+      - styles.css
+    toc-location: left
+    toc-depth: 2
+    page-layout: full
+
+editor: visual

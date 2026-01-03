@@ -1,0 +1,129 @@
+---
+title: "Our Team"
+toc: true
+---
+
+## Lead PI
+
+:::: team-grid
+::: team-member
+![](images/Matthieu-Leray.jpg){width="200"}
+
+**Dr. Matthieu Leray**\
+Principal Investigator. Interested in marine biodiversity, trophic ecology, and conservation genomics.
+
+🏛️ [HKU](https://www.hku.hk/) [STRI](https://stri.si.edu/)\
+<a href="https://YOUR-PERSONAL-SITE.tld" target="_blank" rel="noopener"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" rel="noopener"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/YOUR_BSKY_HANDLE" target="_blank" rel="noopener"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/YOUR_X_HANDLE" target="_blank" rel="noopener"><img src="images/X.png" width="25"/></a>
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Graduate Students
+
+:::::::::: team-grid
+::: team-member
+![](images/Helio-Quintero.jpg){width="200"}
+
+**Helio Quintero**\
+PhD student exploring the diversity and distribution of elasmobranchs using eDNA.
+
+<a href="https://HELIO-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/HELIO_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/HELIO_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/HELIO_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/Laura-Lardinois.jpeg){width="200"}
+
+**Laura Lardinois**\
+PhD student studying the ecology and evolution of coral reef fish microbiomes.
+
+<a href="https://LAURA-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/LAURA_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/LAURA_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/LAURA_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/Luisa-Meister.png){width="200"}
+
+**Luisa Meister**\
+PhD student studying the shifting functional roles of herbivorous fish in the Anthropocene.
+
+<a href="https://LUISA-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/LUISA_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/LUISA_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/LUISA_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/María-Alejandra-Sanchez.jpg){width="200"}
+
+**Maria Alejandra Sanchez**\
+PhD student studying the influence of abiotic and biotic factors on the structure of invertebrate assemblages on coral reefs.
+
+<a href="https://MARIA-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/MARIA_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/MARIA_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/MARIA_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/Natasha-Hinojosa.jpeg){width="200"}
+
+**Natasha Hinojosa**\
+PhD student studying the evolution of trophic traits in coral reef fishes.
+
+<a href="https://NATASHA-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/NATASHA_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/NATASHA_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/NATASHA_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/Paige-Smallman.png){width="200"}
+
+**Paige Smallman**\
+PhD student applying conservation genomics tools for understanding the vulnerability of marine fishes.
+
+<a href="https://PAIGE-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/PAIGE_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/PAIGE_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/PAIGE_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+::: team-member
+![](images/Tess-Morelli.png){width="200"}
+
+**Tess Morelli**\
+PhD student studying the effects of local and global environmental stressors on a marine symbiosis.
+
+<a href="https://TESS-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/TESS_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/TESS_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/TESS_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+::::::::::
+
+------------------------------------------------------------------------
+
+## Affiliated Students
+
+:::: team-grid
+::: team-member
+![](images/Matthew-Doherty.png){width="200"}
+
+**Matthew Doherty**\
+PhD student studying the effect of rising seasurface temperatures on coral reefs
+
+<a href="https://MATTHEW-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/MATTHEW_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/MATTHEW_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/MATTHEW_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+
+<!-- closes .team-member -->
+::::
+
+<!-- closes .team-grid (this was missing) -->
+
+<hr style="margin:1.5rem 0">
+
+## Past members
+
+:::: team-grid
+::: team-member
+![](images/laura.jpg){width="200"}
+
+**Dr. Laura Smith**\
+Postdoctoral fellow studying microbial symbioses and coral reef ecosystems.
+
+<a href="https://LAURA-SMITH-SITE.tld" target="_blank"><img src="images/Personal-site.png" width="25"/></a> <a href="https://www.instagram.com/LAURA_S_INSTAGRAM" target="_blank"><img src="images/Instagram.png" width="25"/></a> <a href="https://bsky.app/profile/LAURA_S_BSKY" target="_blank"><img src="images/Bluesky.png" width="25"/></a> <a href="https://x.com/LAURA_S_X" target="_blank"><img src="images/X.png" width="25"/></a>
+:::
+::::
+
+------------------------------------------------------------------------
+
+<style>
+
+</style>
+
+------------------------------------------------------------------------

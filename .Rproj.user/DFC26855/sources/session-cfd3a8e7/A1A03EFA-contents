@@ -1,0 +1,106 @@
+# Install once if needed:
+# install.packages(c("sf", "rnaturalearth", "rnaturalearthdata", "ggplot2"))
+
+
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(ggplot2)
+
+# --- 1. Get coastline / land polygons (includes islands) ---
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# --- 2. Define the map extent ---
+lon_range <- c(-120, -60)
+lat_range <- c(-10,  30)
+
+# Optional: crop to reduce file size
+world_crop <- st_crop(
+  world,
+  xmin = lon_range[1], xmax = lon_range[2],
+  ymin = lat_range[1], ymax = lat_range[2]
+)
+
+# --- 2b. Sites with stars + multiline labels just below ---
+sites <- data.frame(
+  lon = c(-112.8333,  -87.0574,   -81.7568),
+  lat = c(  18.8333,    5.5282,     7.4693),
+  label = c(
+    "Revillagigedo\nIslands",
+    "Cocos\nIsland",
+    "Coiba\nIslands"
+  )
+)
+
+# Put the text *slightly* south of the star (below)
+sites$lat_label <- sites$lat - 1
+
+# --- 2c. Region labels (no star), italic, with line break after first word ---
+regions <- data.frame(
+  lon = c(-105,   -65),
+  lat = c(  -5,    25),
+  label = c(
+    "Tropical\nEastern Pacific (TEP)",
+    "Western\nAtlantic"
+  )
+)
+
+# --- 3. Build the map ---
+p <- ggplot() +
+  geom_sf(
+    data  = world_crop,
+    fill  = "grey80",   # land in grey
+    color = "black",    # coastline / island outlines
+    linewidth = 0.2
+  ) +
+  # Stars for sites
+  geom_point(
+    data = sites,
+    aes(x = lon, y = lat),
+    shape = 18,          # star
+    size  = 6,
+    stroke = 1
+  ) +
+  # Text under stars (centered)
+  geom_text(
+    data = sites,
+    aes(x = lon, y = lat_label, label = label),
+    hjust = 0.5,
+    vjust = 1,
+    fontface = "bold",
+    lineheight = 0.9,
+    size = 5
+  ) +
+  # Region labels, italic, with line break after first word
+  geom_text(
+    data = regions,
+    aes(x = lon, y = lat, label = label),
+    hjust = 0.5,
+    vjust = 0.5,
+    fontface = "italic",
+    lineheight = 0.9,
+    size = 5
+  ) +
+  coord_sf(
+    xlim = lon_range,
+    ylim = lat_range,
+    expand = FALSE
+  ) +
+  theme_void() +
+  theme(
+    panel.background = element_rect(fill = "white", colour = NA) # ocean in white
+  )
+
+# Print to see in R
+p
+
+# Save as vector PDF
+ggsave(
+  filename = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/eastern_pacific_map.pdf",
+  plot = p,
+  width = 8,
+  height = 6,
+  device = "pdf"
+)
+
+

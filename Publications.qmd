@@ -1,0 +1,364 @@
+---
+title: "Publications"
+toc: true           # enable table of contents
+---
+
+## 2025
+
+<ol reversed start="58">
+
+<li>
+
+Pappalardo P, Hemmi JM, Machida RJ, Leray M, Collins AG, Osborn KJ. 2025. *Taxon-specific BLAST percent identity thresholds for identification of unknown sequences using metabarcoding.* **Methods in Ecology and Evolution** 16, 2380-2394
+
+<li>
+
+O’Dea A, Dillon EM, Brandl SJ, Cramer KL, Cybulski JD, de Gracia B, García-Méndez K, Griswold K, Lin CH, Leray M, Lueders-Dumont JA, Sellers AJ, Wake TA. 2025. *Prehistoric archives reveal evidence of predator loss and prey release in Caribbean reef fish communities.* **Proceedings of the National Academy of Sciences of the United States of America** 122, e2503986122
+
+<li>
+
+Glynn VM, Fernandes de Barros Marangoni L, Guglielmetti M, Tapia ER, Ali V, Quintero H, Rodriguez Guerra EC, Yuval M, Kline DI, Leray M, Connolly SR, Barrett RDH. 2025. *The role of holobiont composition and environmental history in thermotolerance of Tropical Eastern Pacific corals.* **Current Biology** 35, p3048-3063.e7
+
+<li>
+
+Morel-Letelier I, Yuen B, Orellana LH, Kück AC, Camacho-García YE, Lara M, Leray M, Wilkins LGE. 2025. *Seasonal transcriptomic shifts reveal metabolic flexibility of chemosynthetic symbionts in an upwelling region.* **MSystems** 10 e01686-24
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2024
+
+<ol reversed start="54">
+
+<li>
+
+Rouzé H, Knowlton N, Anker A, Hurt C, Wirshing H, Von Wormhoudt A, Leray M. 2024. *An integrated phylogeographic approach for inferring cryptic speciation in the Alpheus lottini species complex, an important coral mutualist.* **iScience** 27, 111034
+
+<li>
+
+Morel-Letelier I, Yuen B, Kück AC, Camacho-García YE, Petersen JM, Lara M, Leray M, Eisen JA, Osvatic JT, Gros O, Wilkins LGE. 2024. *Adaptations to nitrogen availability drive ecological divergence of chemosynthetic symbionts.* **PLoS Genetics** 20, e1011295
+
+<li>
+
+Seymour M, Guibert I, Jeunen GJ, Helstrom M, Leray M, Elbrecht V, Lau A, How CM, Ho Ip JC, Liu Z, Moffitt J, Qian L, Qin X, Tse CM, Wang Y, Wang Z, Zeng X, Zhao M. 2024. *The first International eDNA workshop in Hong Kong: A beginner’s guide for the next generation eDNA researcher.* **Environmental DNA** 6, e552
+
+<li>
+
+McIlroy SE, Guibert I, Archana A, Haze Chung WY, Duffy JE, Gotama R, Hui J, Knowlton N, Leray M, Meyer CP, Panagiotou G, Paulay G, Russell B, Thompson PD, Baker DM. 2024. *Life goes on: spatial heterogeneity promotes biodiversity in an urbanized coastal marine ecosystem.* **Global Change Biology** 30, e17248\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2023
+
+<ol reversed start="50">
+
+<li>
+
+Linsmayer LB, Noel SK, Leray M, Wangpraseurt D, Hassibi C, Kline DI, Tresguerres M. 2023. *Effects of bleaching on oxygen dynamics, energy metabolism, and genotype of symbiotic algae in two Caribbean coral species.* **Science of The Total Environment** 919, 170753
+
+<li>
+
+Weinheimer AR, Aylward FO, Leray M, Scott J. 2023. *Contrasting drivers of abundant phage and prokaryotic communities in tropical, coastal ecosystems across the Isthmus of Panama.* **ISME Communications** 3, 127
+
+<li>
+
+Levy N, Simon-Blecher N, Ben-Ezra S, Yuval M, Doniger T, Leray M, Karako-Lampert S, Tarazi E, Levy O. 2023. *Evaluating biodiversity for coral reef reformation and monitoring on complex 3D structures using environmental DNA (eDNA) metabarcoding.* **Science of The Total Environment** 856, 159051\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2022
+
+<ol reversed start="47">
+
+<li>
+
+O’Dea A, Flantua SGA, Leray M, Lueders-Dumont JA, Titcomb MC, 2022. *Pleistocene sea level changes and crocodile population histories on the Isthmus of Panama: A comment on Avila-Cervantes et al.* **Evolution** 76, 2778–2783
+
+<li>
+
+Clever F, Sourisse JM, Preziosi RF, Eisen JA, Rodriguez Guerra EC, Scott JJ, Wilkins LGE, Altieri AH, McMillan WO, Leray M. 2022. *The gut microbiome variability of a butterflyfish increases on severely degraded Caribbean reefs.* **Communications Biology** 5, 770
+
+<li>
+
+Leray M, Knowlton N, Machida R. 2022. *MIDORI2: A collection of quality controlled, preformatted, and regularly updated reference databases for taxonomic assignment of eukaryotic mitochondrial sequences.* **Environmental DNA** 4, 894–907
+
+<li>
+
+Aguilar R, Prakash S, Ogburn MB, Pagenkopp Lohan KM, MacDonald KS III, Driskell AC, Ahyong ST, Leray M, McIlroy SE, Tuckey TD, Baeza JA. 2022. *Unresolved taxonomy confounds invasive species identification: the Lysmata vittata Stimpson, 1860 (Decapoda: Caridea: Lysmatidae) species complex and recent introduction of Lysmata vittata sensu stricto in the western Atlantic.* **Journal of Crustacean Biology** 42(1), ruab079\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2021
+
+<ol reversed start="43">
+
+<li>
+
+Gaither MR, DiBattista JD, Leray M, von der Heyden S. 2021. *Metabarcoding the marine environment: from single species to biogeographic patterns.* **Environmental DNA** 4, 3-8
+
+<li>
+
+Leray M, Wilkins LGE, Apprill A, Bik HM, Clever F, Connolly SR, De León ME, Duffy EJ, Ezzat L, Gignoux-Wolfsohn S, Herre EA, Kaye JZ, Kline DI, Kueneman JG, McCormick MK, McMillan OW, O’Dea A, Pereira TJ, Petersen JM, Petticord DJ, Torchin ME, Vega Thurber R, Videvall E, Wcislo WT, Yuen B, Eisen JA. 2021. *Natural experiments and long-term monitoring are critical to understand and predict marine host-microbe ecology and evolution.* **PLoS Biology** 19, e3001322
+
+<li>
+
+Johnson MD, Scott JJ, Leray M, Lucey N, Bravo LMR, Wied WL, Altieri AH. 2021. *Rapid ecosystem-scale consequences of acute deoxygenation on a Caribbean coral reef.* **Nature Communications** 12, 1240
+
+<li>
+
+Osvatic JT, Wilkins LGE, Leibrecht L, Leray M, Zaunera S, Polzina J, Camacho Y, Gros O, van Gils JA, Eisen JA, Petersen JM, Yuen B. 2021. *Global biogeography of chemosynthetic symbionts reveals both localized and globally distributed symbiont groups.* **Proceedings of the National Academy of Sciences of the United States of America** 118, e2104378118
+
+<li>
+
+Wells CD, Paulay G, Nguyen BN, Leray M. 2021. *DNA metabarcoding provides insights into the diverse diet of a dominant suspension feeder, the giant plumose anemone Metridium farcimen.* **Environmental DNA** 4, 147-156
+
+<li>
+
+Rodriguez-Ezpeleta N, Morissette O, Bean C, Manu S, Banerjee P, Lacoursiere A, Ben K, Alter E, Roger F, Holman L, Stewart K, Monaghan M, Mauvisseau Q, Mirimin L, Wangensteen OS, Antognazza C, Helyar S, de Boer H, Monchamp ME, Nijland R, Abbott C, Doi H, Barnes M, Leray M, Hablützel P, Deiner K. 2021. *Trade-offs between reducing complex terminology and producing accurate interpretations from environmental DNA: Comment on “Environmental DNA: What’s behind the term?”* **Molecular Ecology** 19, 4601-4605
+
+<li>
+
+Kline DI, Dehgan A, Bunje P, Selbe S, Chirayath V, Pizarro O, Leray M, Connolly S, Bongaerts P, Treibitz T, Levy O, Kriegman D, Andersson A, McField M, Duffy JE. 2021. *The coral reef sentinels program: A Mars shot for blue planet health.* **Marine Technology Society Journal** 55, 118-119
+
+<li>
+
+Anker AA, Pachelle PPG, Leray M. 2021. *Two new species of Typton Costa, 1844 from tropical American waters, with taxonomic notes on T. tortugae McClendon, 1911 and a new record of T. granulosus Ayón-Parente, Hendrickx & Galvan-Villa, 2015 (Decapoda: Caridea: Palaemonidae).* **Zootaxa** 4933, 379-390
+
+<li>
+
+Anker AA, Leray M, Pachelle PPG. 2021. *A new species of Alpheus Fabricius, 1798 from the Caribbean coast of Panama.* **Zootaxa** 4933, 379-390\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2020
+
+<ol reversed start="34">
+
+<li>
+
+Leray M, Knowlton N, Ho S, Nguyen BN, Machida R. 2020. *Reply to Locatelli et al.: Evaluating species-level accuracy of GenBank metazoan sequences will require experts’ effort in each group.* **Proceedings of the National Academy of Sciences of the United States of America** 117, 32213-32214
+
+<li>
+
+Leray M, Machida R. 2020. *Seabed mining could come at a high price for a unique fauna.* **Molecular Ecology** 29, 4506-4509
+
+<li>
+
+Ferreira LAA, Leray M, Anker A. 2020. *New findings of the stenopodidean shrimp Microprosthema looensis Goy & Felder, 1988.* **Zootaxa** 4729, 445-450
+
+<li>
+
+Nguyen BN, Shen EW, Seemann J, Correa AMS, O’Donnell JL, Altieri AH, Knowlton N, Crandall KA, Egan SP, McMillan WO, Leray M. 2020. *Environmental DNA survey captures patterns of fish and invertebrate diversity across a tropical seascape.* **Scientific Reports** 10:6729\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2019
+
+<ol reversed start="30">
+
+<li>
+
+Leray M, Knowlton N, Ho SL, Nguyen BN, Machida RJ. 2019. *GenBank is a reliable resource for 21st century biodiversity research.* **Proceedings of the National Academy of Sciences of the United States of America** 116, 22651-22656
+
+<li>
+
+Wilkins LGE, Leray M, Yuen B, Peixoto R, Pereira TJ, Bik HM, Coil DA, Duffy JE, Herre EA, Lessios H, Lucey N, Mejia LC, O’Dea A, Rasher DB, Sharp K, Sogin EM, Thacker RW, Vega Thurber R, Wcislo WT, Wilbanks EG, Eisen JA. 2019. *Host-associated microbiomes drive structure and function of marine ecosystems.* **PLoS Biology** 17, e3000533
+
+<li>
+
+Van Wormhoudt A, Adjeroud M, Rouzé H, Leray M. 2019. *Recent and old duplications in crustaceans “Internal Transcribed Spacer 1”: structural and phylogenetic implications.* **Molecular Biology Reports** 46, 5185–5195
+
+<li>
+
+Leray M, Alldredge AL, Yang JY, Meyer CP, Holbrook SJ, Schmitt RJ, Knowlton N, Brooks AJ. 2019. *Dietary partitioning promotes the coexistence of planktivorous species on coral reefs.* **Molecular Ecology** 28, 2694–2710
+
+<li>
+
+Kandler NM, Wooster MK, Leray M, Knowlton N, de Voogd NJ, Paulay G, Berumen ML. 2019. *Hyperdiverse macrofauna communities associated with a common sponge, Stylissa carteri, shift across ecological gradients in the Central Red Sea.* **Diversity** 11, 18\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2018
+
+<ol reversed start="25">
+
+<li>
+
+Galtier d’Auriac I, Quinn RA, Maughan H, Nothias LF, Little M, Kapono CA, Cobian A, Reyes BT, Green K, Quistad SD, Leray M, Smith JE, Dorrestein PC, Rohwer F, Deheyn DD, Hartmann AC. 2018. *Before platelets: the production of platelet-activating factor during growth and stress in a basal marine organism.* **Proceedings of the Royal Society B: Biological Sciences** 285, 20181307
+
+<li>
+
+Pearman JK, Leray M, Villalobos R, Machida R, Berumen M, Knowlton N, Carvalho S. 2018. *Cross-shelf investigation of coral reef cryptic benthic organisms reveals diversity patterns of the hidden majority.* **Scientific Reports** 8, 8090
+
+<li>
+
+Pachelle PPG, Leray M, Anker AA, Lasley R. 2018. *Five new records of marine shrimps from the Caribbean coast of Panama.* **Zootaxa** 4438, 128-136
+
+<li>
+
+Leray M, Ho S-L, Lin J, Machida R. 2018. *MIDORI server: a webserver for taxonomic assignment of unknown metazoan mitochondrial-encoded sequences using a curated database.* **Bioinformatics** 34, bty454\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2017
+
+<ol reversed start="21">
+
+<li>
+
+Ransome E, Geller JB, Timmers M, Leray M, Mahardini A, Sembiring A, Collins AG, Meyer CP. 2017. *The importance of standardization for biodiversity comparisons, A case study using autonomous reef monitoring structures (ARMS) and metabarcoding to measure cryptic diversity on Mo’orea coral reefs, French Polynesia.* **PLoS One** 12,e0175066
+
+<li>
+
+Rouzé H, Leray M, Magalon H, Penin L, Gélin P, Knowlton N, Fauvelot C. 2017. *Molecular characterization reveals the complexity of previously overlooked coral-exosymbiont interactions and the implications for coral-guild ecology.* **Scientific Report** 7,44923
+
+<li>
+
+Leray M, Knowlton N. 2017. *Random sampling causes the low reproducibility of rare eukaryotic OTUs in Illumina COI metabarcoding.* **PeerJ** 5,e3006
+
+<li>
+
+Machida RJ, Leray M, Ho S-L, Knowlton N. 2017. *Metazoan mitochondrial gene sequence reference datasets for taxonomic assignment of environmental samples.* **Scientific Data** 4,170027
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2016
+
+<ol reversed start="17">
+
+<li>
+
+Leray M, Knowlton N. 2016. *Censusing marine eukaryotic diversity in the twenty-first century.* **Philosophical Transactions of the Royal Society B** 371,20150331
+
+<li>
+
+Al-Rshaidat MMD, Snider A, Rosebraugh S, Devine AM, Devine TD, Plaisance L, Knowlton N, Leray M. 2016. *Deep COI sequencing of standardized benthic samples unveils overlooked diversity of Jordanian coral reefs in the northern Red Sea.* **Genome** 59,724-737
+
+<li>
+
+Leray M, Knowlton N. 2016. *Visualizing patterns of marine eukaryotic diversity from metabarcoding data using QIIME.* **In, Bourlat S.J. (eds) Methods in Molecular Biology, Marine Genomics Methods and Protocols. Springer Protocols**, pp 219-235
+
+<li>
+
+Bourlat SJ, Haenel Q, Finnman J, Leray M. 2016. *Preparation of amplicon libraries for metabarcoding of marine eukaryotes using Illumina MiSeq, The dual-PCR method.* **In, Bourlat S.J. (eds) Methods in Molecular Biology, Marine Genomics Methods and Protocols. Springer Protocols**, pp 197-207
+
+<li>
+
+Leray M, Haenel Q, Bourlat SJ. 2016. *Preparation of amplicon libraries for metabarcoding of marine eukaryotes using Illumina MiSeq, The adapter ligation method.* **In, Bourlat S.J. (eds) Methods in Molecular Biology, Marine Genomics Methods and Protocols. Springer Protocols**, pp 209-218\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2015
+
+<ol reversed start="12">
+
+<li>
+
+Leray M, Meyer CP, Mills SC. 2015. *Metabarcoding dietary analysis of coral dwelling predatory fish demonstrates the minor contribution of coral mutualists to their highly partitioned, generalist diet.* **PeerJ** 3, e1047
+
+<li>
+
+Knowlton N, Leray M. 2015. *Exploring coral reefs using the tools of molecular genetics.* **In, Birkeland C. (eds) Coral Reefs in the Anthropocene. Springer Science+Business Media, Dordrecht**, pp 117-132
+
+<li>
+
+Leray M, Knowlton N. 2015. *DNA barcoding and metabarcoding of standardized samples reveal patterns of marine benthic diversity.* **Proceedings of the National Academy of Sciences of the United States of America** 112, 2076-2081\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2014
+
+<ol reversed start="9">
+
+<li>
+
+Stier AC, Leray M. 2014. *Predators alter community organization of coral reef cryptofauna and reduce abundance of coral mutualists.* **Coral Reefs** 33,181-191\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2013
+
+<ol reversed start="8">
+
+<li>
+
+Leray M, Yang JY, Meyer CP, Mills SC, Agudelo N, Ranwez V, Boehm JT, Machida RJ. 2013. *A new versatile primer set targeting a short fragment of the mitochondrial COI region for metabarcoding metazoan diversity, application for characterizing coral reef fish gut contents.* **Frontiers in Zoology** 10,34
+
+<li>
+
+Leray M, Agudelo N, Mills SC, Meyer CP. 2013. *Effectiveness of annealing blocking primers versus restriction enzymes for characterization of generalist diets, unexpected prey revealed in the gut contents of two coral reef fish species.* **PLoS One** 8,e58076\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2012
+
+<ol reversed start="6">
+
+<li>
+
+Leray M, Boehm JT, Mills SC, Meyer CP. 2012. *Moorea BIOCODE barcode library as a tool for understanding predator-prey interactions, insights into the diet of common predatory coral reef fishes.* **Coral Reefs** 31,383-388
+
+<li>
+
+Leray M, Beraud M, Anker A, Chancerelle Y, Mills S. 2012. *Acanthaster planci outbreak, decline in coral health, coral size structure modification and consequences for obligate decapod assemblages.* **PLoS One** 7,e35456
+
+<li>
+
+Stier AC, Gil MA, McKeon CS, Lemer S, Leray M, Mills SC, Osenberg CW. 2012. *Housekeeping mutualisms, do more symbionts facilitate host performance?* **PLoS One** 7,e32079\
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2010
+
+<ol reversed start="3">
+
+<li>
+
+Leray M, Beldade R, Holbrook SJ, Schmitt RJ, Planes S, Bernardi G. 2010. *Allopatric divergence and speciation in coral reef fish, the three-spot Dascyllus, Dascyllus trimaculatus, species complex.* **Evolution** 64,1218-1230
+
+<li>
+
+Van Herwerden L, Howard Choat J, Newman SJ, Leray M, Hillersøy G. 2009. *Complex patterns of population structure and recruitment of Plectropomus leopardus (Pisces, Epinephelidae) in the Indo-West Pacific, Implications for fisheries management.* **Marine Biology** 156,1595-1607
+
+</ol>
+
+------------------------------------------------------------------------
+
+## 2009
+
+<ol start="1">
+
+<li>
+
+Leray M, Beldade R, Holbrook SJ, Schmitt RJ, Planes S, Bernardi G. 2009. *Isolation and characterization of 13 polymorphic nuclear microsatellite primers for the widespread Indo‐Pacific three‐spot damselfish, Dascyllus trimaculatus, and closely related D. auripinnis.* **Molecular ecology resources** 9, 213-215\
+
+</ol>
+
+------------------------------------------------------------------------

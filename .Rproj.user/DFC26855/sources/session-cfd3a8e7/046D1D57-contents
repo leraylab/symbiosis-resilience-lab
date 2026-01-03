@@ -1,0 +1,1440 @@
+###############################################################################
+######## This script is designed to summarize the data and prepare figures
+###############################################################################
+
+
+## DESIGN
+# ASVs of three eDNA datasets were Blasted against three separate databases
+# 1) The whole BOLD database (fish only)
+# 2) BOLD but only sequences of species recorded in the TEP
+# 3) BOLD but only sequences of species recorded in the TEP and from specimens collected in the TEP
+
+
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(stringr)
+library(ggplot2)
+library(ggpattern)
+
+
+###############################################################################
+# Load data
+###############################################################################
+
+
+## outputs of best_hits_range curation (galaxy tool)
+in1 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/cocos.filtered.txt"
+cocos <- read.csv(in1, header=TRUE, sep="\t", row.names = NULL)
+
+in2 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/coiba.filtered.txt"
+coiba <- read.csv(in2, header=TRUE, sep="\t", row.names = NULL)
+
+in3 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/revis.filtered.txt"
+revis <- read.csv(in3, header=TRUE, sep="\t", row.names = NULL)
+
+## outputs of best_hit curation (galaxy tool)
+in4 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/cocos.filtered.bh.txt"
+cocos.bh <- read.csv(in4, header=TRUE, sep="\t", row.names = NULL)
+
+in5 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/coiba.filtered.bh.txt"
+coiba.bh <- read.csv(in5, header=TRUE, sep="\t", row.names = NULL)
+
+in6 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/revis.filtered.bh.txt"
+revis.bh <- read.csv(in6, header=TRUE, sep="\t", row.names = NULL)
+
+###############################################################################
+# simplify dataframes
+# split species into multiple rows (best_hits_range curation only)
+###############################################################################
+
+cocos <- cocos %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(cocos)
+cocos <- cocos %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+
+# Split species listed in "species_all", "species_TEP", "species_TEPonly" into multiple columns
+cols_to_split <- c("species_all", "species_TEP", "species_TEPonly")
+for (col in cols_to_split) {
+  new_names <- paste0(col, c(".1", ".2", ".3", ".4", ".5"))  # generates names like "species_all", "species_all.2", "species_all.3"
+  cocos <- cocos %>%
+    separate(col = all_of(col),
+             into = new_names,
+             sep = "; ",
+             fill = "right",     # fills missing parts with NA
+             remove = TRUE)      # removes the original column
+}
+
+cocos.bh <- cocos.bh %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(cocos.bh)
+cocos.bh <- cocos.bh %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+
+coiba <- coiba %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(coiba)
+coiba <- coiba %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+# Split species listed in "species_all", "species_TEP", "species_TEPonly" into multiple columns
+cols_to_split <- c("species_all", "species_TEP", "species_TEPonly")
+for (col in cols_to_split) {
+  new_names <- paste0(col, c(".1", ".2", ".3", ".4", ".5"))  # generates names like "species_all", "species_all.2", "species_all.3"
+  coiba <- coiba %>%
+    separate(col = all_of(col),
+             into = new_names,
+             sep = "; ",
+             fill = "right",     # fills missing parts with NA
+             remove = TRUE)      # removes the original column
+}
+
+coiba.bh <- coiba.bh %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(coiba.bh)
+coiba.bh <- coiba.bh %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+
+revis <- revis %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(revis)
+revis <- revis %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+# Split species listed in "species_all", "species_TEP", "species_TEPonly" into multiple columns
+cols_to_split <- c("species_all", "species_TEP", "species_TEPonly")
+for (col in cols_to_split) {
+  new_names <- paste0(col, c(".1", ".2", ".3", ".4", ".5"))  # generates names like "species_all", "species_all.2", "species_all.3"
+  revis <- revis %>%
+    separate(col = all_of(col),
+             into = new_names,
+             sep = "; ",
+             fill = "right",     # fills missing parts with NA
+             remove = TRUE)      # removes the original column
+}
+
+revis.bh <- revis.bh %>% select(-lca.rank_all, -phylum_all, -class_all, -order_all, -identity_all,
+                          -lca.rank_TEP, -phylum_TEP, -class_TEP, -order_TEP, -identity_TEP,
+                          -lca.rank_TEPonly, -phylum_TEPonly, -class_TEPonly, -order_TEPonly, -identity_TEPonly,
+                          -identificationRemarks_unesco, -lowest.taxon_unesco, -class_unesco, -order_unesco)
+colnames(revis.bh)
+revis.bh <- revis.bh %>%
+  mutate(across(everything(), ~na_if(., "no identification"))) %>%
+  mutate(across(everything(), ~na_if(., "")))
+
+###############################################################################
+# Load species record lists
+###############################################################################
+
+# Load Ross' record list for the TEP
+TEP.records <- "~/Dropbox (Personal)/STRI_Ross_fish/Lists_fish/TEP_all.csv"
+TEP <- read.csv(TEP.records, header=TRUE, sep = ",", row.names = NULL)
+TEP$Probable <- sub("\\s+$", "", TEP$Probable)
+# Remove TEP species because not in BOLD (lack of update) and instead use sisters names (T crocodilus and T acus, and P pterura) that are in the list
+TEP <- TEP[!TEP$Probable %in% c("Platybelone pterura", "Tylosurus fodiator", "Tylosurus melanotus"), ] 
+
+TEP.records.shallow <- "~/Dropbox (Personal)/STRI_Ross_fish/Lists_fish/TEP_shallowerthan40m.csv"
+TEP.shallow <- read.csv(TEP.records.shallow, header=TRUE, sep = ",", row.names = NULL)
+TEP.shallow$Probable <- sub("\\s+$", "", TEP.shallow$Probable)
+# Remove TEP species because not in BOLD (lack of update) and instead use sisters names (T crocodilus and T acus, and P pterura) that are in the list
+TEP.shallow <- TEP.shallow[!TEP.shallow$Probable %in% c("Platybelone pterura", "Tylosurus fodiator", "Tylosurus melanotus"), ] 
+
+colnames(TEP)
+# "Probable" "Common.Names" "Confirmed" 
+colnames(TEP.shallow)
+# "Probable" "Common.Names" "Confirmed" 
+
+# Load list of species from the Revis
+records.1 <- "~/Dropbox (Personal)/STRI_Ross_fish/Lists_fish/Revs.csv"
+Revis.records <- read.csv(records.1, header=TRUE, sep = ",", row.names = NULL)
+Revis.records$Probable <- sub("\\s+$", "", Revis.records$Probable)
+# Remove TEP species because not in BOLD (lack of update) and instead use sisters names (T crocodilus and T acus, and P pterura) that are in the list
+Revis.records <- Revis.records[!Revis.records$Probable %in% c("Platybelone pterura", "Tylosurus fodiator", "Tylosurus melanotus"), ] 
+
+records.2 <- "~/Dropbox (Personal)/STRI_Ross_fish/Lists_fish/Gulf_of_Chiriqui.csv"
+Coiba.records <- read.csv(records.2, header=TRUE, sep = ",", row.names = NULL)
+Coiba.records$Probable <- sub("\\s+$", "", Coiba.records$Probable)
+# Remove TEP species because not in BOLD (lack of update) and instead use sisters names (T crocodilus and T acus, and P pterura) that are in the list
+Coiba.records <- Coiba.records[!Coiba.records$Probable %in% c("Platybelone pterura", "Tylosurus fodiator", "Tylosurus melanotus"), ] 
+
+records.3 <- "~/Dropbox (Personal)/STRI_Ross_fish/Lists_fish/Cocos.csv"
+Cocos.records <- read.csv(records.3, header=TRUE, sep = ",", row.names = NULL)
+Cocos.records$Probable <- sub("\\s+$", "", Cocos.records$Probable)
+# Remove TEP species because not in BOLD (lack of update) and instead use sisters names (T crocodilus and T acus, and P pterura) that are in the list
+Cocos.records <- Cocos.records[!Cocos.records$Probable %in% c("Platybelone pterura", "Tylosurus fodiator", "Tylosurus melanotus"), ] 
+
+
+###############################################################################
+# Compare Blast outputs and species record lists
+###############################################################################
+
+# all
+species_cols <- paste0("species_all.", 1:5)
+
+cocos <- cocos %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+cocos <- cocos %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Cocos.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Cocos"))
+
+cocos.bh <- cocos.bh %>%
+  mutate(species_all_recorded_TEP = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+cocos.bh <- cocos.bh %>%
+  mutate(species_all_recorded_Cocos = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% Cocos.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+
+coiba <- coiba %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+coiba <- coiba %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Coiba.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Coiba"))
+
+coiba.bh <- coiba.bh %>%
+  mutate(species_all_recorded_TEP = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+coiba.bh <- coiba.bh %>%
+  mutate(species_all_recorded_Coiba = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% Coiba.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+
+revis <- revis %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+revis <- revis %>%
+  mutate(across(all_of(species_cols), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Revis.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Revis"))
+
+revis.bh <- revis.bh %>%
+  mutate(species_all_recorded_TEP = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+revis.bh <- revis.bh %>%
+  mutate(species_all_recorded_Revis = case_when(
+    is.na(species_all) ~ NA_character_,
+    species_all %in% Revis.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+
+# TEP
+species_colsTEP <- paste0("species_TEP.", 1:5)
+cocos <- cocos %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+cocos <- cocos %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Cocos.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Cocos"))
+
+cocos.bh <- cocos.bh %>%
+  mutate(species_TEP_recorded_TEP = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+cocos.bh <- cocos.bh %>%
+  mutate(species_TEP_recorded_Cocos = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% Cocos.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+coiba <- coiba %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+coiba <- coiba %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Coiba.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Coiba"))
+
+coiba.bh <- coiba.bh %>%
+  mutate(species_TEP_recorded_TEP = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+coiba.bh <- coiba.bh %>%
+  mutate(species_TEP_recorded_Coiba = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% Coiba.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+revis <- revis %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+revis <- revis %>%
+  mutate(across(all_of(species_colsTEP), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Revis.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Revis"))
+
+revis.bh <- revis.bh %>%
+  mutate(species_TEP_recorded_TEP = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+revis.bh <- revis.bh %>%
+  mutate(species_TEP_recorded_Revis = case_when(
+    is.na(species_TEP) ~ NA_character_,
+    species_TEP %in% Revis.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+# TEPonly
+species_colsTEPonly <- paste0("species_TEPonly.", 1:5)
+cocos <- cocos %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+cocos <- cocos %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Cocos.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Cocos"))
+
+cocos.bh <- cocos.bh %>%
+  mutate(species_TEPonly_recorded_TEP = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+cocos.bh <- cocos.bh %>%
+  mutate(species_TEPonly_recorded_Cocos = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% Cocos.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+
+coiba <- coiba %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+coiba <- coiba %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Coiba.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Coiba"))
+
+coiba.bh <- coiba.bh %>%
+  mutate(species_TEPonly_recorded_TEP = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+coiba.bh <- coiba.bh %>%
+  mutate(species_TEPonly_recorded_Coiba = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% Coiba.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+
+
+revis <- revis %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% TEP$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.TEP"))
+revis <- revis %>%
+  mutate(across(all_of(species_colsTEPonly), 
+                ~ case_when(
+                  is.na(.) ~ NA_character_,
+                  . %in% Revis.records$Probable ~ "Yes",
+                  TRUE ~ "No"
+                ),
+                .names = "{.col}.recorded.Revis"))
+
+revis.bh <- revis.bh %>%
+  mutate(species_TEPonly_recorded_TEP = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% TEP$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+revis.bh <- revis.bh %>%
+  mutate(species_TEPonly_recorded_Revis = case_when(
+    is.na(species_TEPonly) ~ NA_character_,
+    species_TEPonly %in% Revis.records$Probable ~ "Yes",
+    TRUE ~ "No"
+  ))
+
+# unesco
+cocos <- cocos %>%
+  mutate(species_unesco_recorded_TEP = case_when(
+    is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+    species_unesco %in% TEP$Probable ~ "Yes",    
+    TRUE ~ "No"
+  ))
+
+cocos <- cocos %>%
+  mutate(
+    species_unesco_recorded_Cocos = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Cocos.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+coiba <- coiba %>%
+  mutate(
+    species_unesco_recorded_TEP = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% TEP$Probable ~ "Yes",
+      TRUE ~ "No"
+    ),
+    species_unesco_recorded_Coiba = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Coiba.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+revis <- revis %>%
+  mutate(
+    species_unesco_recorded_TEP = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% TEP$Probable ~ "Yes",
+      TRUE ~ "No"
+    ),
+    species_unesco_recorded_Revis = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Revis.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+cocos.bh <- cocos.bh %>%
+  mutate(
+    species_unesco_recorded_TEP = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% TEP$Probable ~ "Yes",
+      TRUE ~ "No"
+    ),
+    species_unesco_recorded_Cocos = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Cocos.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+coiba.bh <- coiba.bh %>%
+  mutate(
+    species_unesco_recorded_TEP = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% TEP$Probable ~ "Yes",
+      TRUE ~ "No"
+    ),
+    species_unesco_recorded_Coiba = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Coiba.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+revis.bh <- revis.bh %>%
+  mutate(
+    species_unesco_recorded_TEP = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% TEP$Probable ~ "Yes",
+      TRUE ~ "No"
+    ),
+    species_unesco_recorded_Revis = case_when(
+      is.na(species_unesco) | species_unesco == "" ~ NA_character_,
+      species_unesco %in% Revis.records$Probable ~ "Yes",
+      TRUE ~ "No"
+    )
+  )
+
+
+# Order columns COCOS
+species_cols <- paste0("species_all.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols, ".recorded.TEP")
+recorded_cols_Cocos <- paste0(species_cols, ".recorded.Cocos") # Define the corresponding recorded columns for TEP and Cocos
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_Cocos) # Combine into a list so we can insert both at each position
+orig_cols <- names(cocos)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols)) {
+  col <- species_cols[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+cocos <- cocos[, new_order]
+
+species_cols.TEP <- paste0("species_TEP.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols.TEP, ".recorded.TEP")
+recorded_cols_Cocos <- paste0(species_cols.TEP, ".recorded.Cocos") # Define the corresponding recorded columns for TEP and Cocos
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_Cocos) # Combine into a list so we can insert both at each position
+orig_cols <- names(cocos)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEP)) {
+  col <- species_cols.TEP[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+cocos <- cocos[, new_order]
+
+species_cols.TEPonly <- paste0("species_TEPonly.", 1:5) # Define the base species columns
+recorded_cols_TEPonly <- paste0(species_cols.TEPonly, ".recorded.TEP")
+recorded_cols_Cocos <- paste0(species_cols.TEPonly, ".recorded.Cocos") # Define the corresponding recorded columns for TEP and Cocos
+recorded_pairs <- Map(c, recorded_cols_TEPonly, recorded_cols_Cocos) # Combine into a list so we can insert both at each position
+orig_cols <- names(cocos)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEPonly)) {
+  col <- species_cols.TEPonly[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+cocos <- cocos[, new_order]
+
+
+# Order columns COIBA
+species_cols <- paste0("species_all.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols, ".recorded.TEP")
+recorded_cols_coiba <- paste0(species_cols, ".recorded.Coiba") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_coiba) # Combine into a list so we can insert both at each position
+orig_cols <- names(coiba)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols)) {
+  col <- species_cols[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+coiba <- coiba[, new_order]
+
+species_cols.TEP <- paste0("species_TEP.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols.TEP, ".recorded.TEP")
+recorded_cols_coiba <- paste0(species_cols.TEP, ".recorded.Coiba") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_coiba) # Combine into a list so we can insert both at each position
+orig_cols <- names(coiba)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEP)) {
+  col <- species_cols.TEP[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+coiba <- coiba[, new_order]
+
+species_cols.TEPonly <- paste0("species_TEPonly.", 1:5) # Define the base species columns
+recorded_cols_TEPonly <- paste0(species_cols.TEPonly, ".recorded.TEP")
+recorded_cols_coiba <- paste0(species_cols.TEPonly, ".recorded.Coiba") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEPonly, recorded_cols_coiba) # Combine into a list so we can insert both at each position
+orig_cols <- names(coiba)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEPonly)) {
+  col <- species_cols.TEPonly[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+coiba <- coiba[, new_order]
+
+
+
+# Order columns REVIS
+species_cols <- paste0("species_all.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols, ".recorded.TEP")
+recorded_cols_revis <- paste0(species_cols, ".recorded.Revis") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_revis) # Combine into a list so we can insert both at each position
+orig_cols <- names(revis)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols)) {
+  col <- species_cols[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+revis <- revis[, new_order]
+
+species_cols.TEP <- paste0("species_TEP.", 1:5) # Define the base species columns
+recorded_cols_TEP <- paste0(species_cols.TEP, ".recorded.TEP")
+recorded_cols_revis <- paste0(species_cols.TEP, ".recorded.Revis") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEP, recorded_cols_revis) # Combine into a list so we can insert both at each position
+orig_cols <- names(revis)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEP)) {
+  col <- species_cols.TEP[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+revis <- revis[, new_order]
+
+species_cols.TEPonly <- paste0("species_TEPonly.", 1:5) # Define the base species columns
+recorded_cols_TEPonly <- paste0(species_cols.TEPonly, ".recorded.TEP")
+recorded_cols_revis <- paste0(species_cols.TEPonly, ".recorded.Revis") # Define the corresponding recorded columns for TEP and coiba
+recorded_pairs <- Map(c, recorded_cols_TEPonly, recorded_cols_revis) # Combine into a list so we can insert both at each position
+orig_cols <- names(revis)
+new_order <- orig_cols
+# Insert both recorded columns right after their corresponding species column
+for (i in seq_along(species_cols.TEPonly)) {
+  col <- species_cols.TEPonly[i]
+  rec_cols <- recorded_pairs[[i]]
+  pos <- which(new_order == col)
+  new_order <- append(new_order, rec_cols, after = pos)
+  new_order <- new_order[!duplicated(new_order)]
+}
+revis <- revis[, new_order]
+
+write.table(cocos, file = "~/Downloads/cocos.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+write.table(coiba, file = "~/Downloads/coiba.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+write.table(revis, file = "~/Downloads/revis.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+
+write.table(cocos.bh, file = "~/Downloads/cocos.bh.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+write.table(coiba.bh, file = "~/Downloads/coiba.bh.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+write.table(revis.bh, file = "~/Downloads/revis.bh.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+colnames(cocos.bh)
+
+
+###############################################################################
+# Make summary tables of number of species recorded at each locality
+###############################################################################
+
+
+### BEST_HITS_RANGE
+
+df_list <- list(Cocos = cocos, Coiba = coiba, Revis = revis)
+calc_stats <- function(df, site_name) {
+  recorded_cols <- df %>% select(contains(".recorded"))
+  
+  percent_yes <- recorded_cols %>%
+    summarise(across(everything(), ~ mean(.x == "Yes", na.rm = TRUE) * 100)) %>%
+    pivot_longer(everything(), names_to = "Column", values_to = paste0(site_name, "_pct_yes"))
+  
+  non_na_count <- recorded_cols %>%
+    summarise(across(everything(), ~ sum(!is.na(.x)))) %>%
+    pivot_longer(everything(), names_to = "Column", values_to = paste0(site_name, "_n"))
+  
+  left_join(percent_yes, non_na_count, by = "Column") %>%
+    mutate(BaseColumn = str_replace(Column, paste0("\\.", site_name, "$"), ""))
+}
+stats_list <- imap(df_list, calc_stats)
+wide_results <- reduce(stats_list, full_join, by = "BaseColumn") %>%
+  select(BaseColumn, ends_with("_pct_yes"), ends_with("_n")) %>%
+  arrange(BaseColumn)
+wide_results <- wide_results %>%
+  mutate(BaseColumn = str_replace(BaseColumn, "\\.recorded$", ".recorded.locality"))
+
+wide_results <- wide_results %>%
+  select(BaseColumn, Cocos_n, Cocos_pct_yes, Coiba_n, Coiba_pct_yes, Revis_n, Revis_pct_yes)
+
+desired_order <- c(
+  paste0("species_all.", 1:5, ".recorded.TEP"),
+  paste0("species_all.", 1:5, ".recorded.locality"),
+  paste0("species_TEP.", 1:5, ".recorded.TEP"),
+  paste0("species_TEP.", 1:5, ".recorded.locality"),
+  paste0("species_TEPonly.", 1:5, ".recorded.TEP"),
+  paste0("species_TEPonly.", 1:5, ".recorded.locality"),
+  "species_unesco.recorded.TEP",
+  "species_unesco.recorded.locality"
+)
+
+wide_results <- wide_results %>%
+  mutate(BaseColumn = factor(BaseColumn, levels = desired_order)) %>%
+  arrange(BaseColumn)
+
+write.table(wide_results, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/summary_percent2.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+
+
+### BEST_HIT by ASV
+summarize_recorded <- function(df) {
+  df %>%
+    select(contains("_recorded_")) %>%
+    pivot_longer(cols = everything(), names_to = "Column", values_to = "Value") %>%
+    group_by(Column) %>%
+    summarise(
+      n = sum(!is.na(Value)),
+      yes = sum(Value == "Yes", na.rm = TRUE),
+      no = sum(Value == "No", na.rm = TRUE),
+      prop_yes = yes / n,
+      .groups = "drop"
+    )
+}
+# Apply to each dataframe
+cocos.bh_summary <- summarize_recorded(cocos.bh)
+coiba.bh_summary <- summarize_recorded(coiba.bh)
+revis.bh_summary <- summarize_recorded(revis.bh)
+
+# Add Site column to each summary
+cocos.bh_summary <- summarize_recorded(cocos.bh) %>% mutate(Site = "Cocos")
+coiba.bh_summary <- summarize_recorded(coiba.bh) %>% mutate(Site = "Coiba")
+revis.bh_summary <- summarize_recorded(revis.bh) %>% mutate(Site = "Revis")
+
+combined.bh_summary <- bind_rows(cocos.bh_summary, coiba.bh_summary, revis.bh_summary)
+
+# Add database column
+combined.bh_summary <- combined.bh_summary %>%
+  mutate(
+    database = case_when(
+      str_detect(Column, "species_all") ~ "Whole BOLD",
+      str_detect(Column, "species_TEPonly") ~ "BOLD with TEP records",
+      str_detect(Column, "species_TEP") ~ "BOLD with TEP species",
+      str_detect(Column, "species_unesco") ~ "Whole BOLD unesco",
+      TRUE ~ NA_character_
+    ),
+    `Record list` = case_when(
+      str_detect(Column, "_TEPonly") ~ "Whole TEP",
+      str_detect(Column, "_TEP") ~ "Whole TEP",
+      str_detect(Column, "_Cocos") ~ "Cocos",
+      str_detect(Column, "_Coiba") ~ "Coiba",
+      str_detect(Column, "_Revis") ~ "Revis",
+      TRUE ~ NA_character_
+    )
+  )
+
+
+#####################################################
+######## Summarize for stacked barplots for all Sites
+summary_for_barplot <- combined.bh_summary %>%
+  group_by(Site, database) %>%
+  summarise(
+    total_ASVs = max(n),
+    TEP_ASVs = sum(yes[grepl("_TEP$", Column)]),
+    Recorded.locally = sum(yes[grepl(paste0("_", unique(Site), "$"), Column)]),
+    .groups = "drop"
+  )
+
+# Create stacked data with exclusive categories
+stacked_bar_data <- summary_for_barplot %>%
+  mutate(
+    Not.recorded.in.TEP = total_ASVs - TEP_ASVs,
+    Recorded.in.TEP = TEP_ASVs - Recorded.locally
+  ) %>%
+  select(Site, database, Recorded.locally, Recorded.in.TEP, Not.recorded.in.TEP) %>%
+  pivot_longer(cols = -c(Site, database), names_to = "Category", values_to = "Count")
+
+
+# order databases
+stacked_bar_data$database <- factor(
+  stacked_bar_data$database,
+  levels = c(
+    "Whole BOLD unesco",
+    "Whole BOLD",
+    "BOLD with TEP species",
+    "BOLD with TEP records"
+  )
+)
+
+# define colors
+fill_colors <- c(
+  "Not.recorded.in.TEP" = "darkgrey",
+  "Recorded.in.TEP" = "white",
+  "Recorded.locally" = "white"
+)
+
+pattern_values <- c(
+  "Not.recorded.in.TEP" = "none",
+  "Recorded.in.TEP" = "stripe",
+  "Recorded.locally" = "none"
+)
+
+### Plot with no internal separations
+# First: draw bar outlines (invisible fill, just border)
+stacked.ASVs <- ggplot(stacked_bar_data, aes(x = database, y = Count)) +
+  geom_bar(
+    stat = "identity",
+    data = stacked_bar_data %>%
+      group_by(Site, database) %>%
+      summarise(Count = sum(Count), .groups = "drop"),
+    fill = NA,
+    color = "black",
+    linewidth = 0.6
+  ) +
+  
+  # Then: overlay actual pattern-filled stacked bars without borders
+  geom_bar_pattern(
+    aes(fill = Category, pattern = Category),
+    stat = "identity",
+    color = NA,  # No inner outlines
+    pattern_fill = "black",
+    pattern_density = 0.05,
+    pattern_spacing = 0.025,
+    pattern_key_scale_factor = 0.6,
+    pattern_alpha = 0.5
+  ) +
+  
+  facet_wrap(~ Site) +
+  scale_fill_manual(values = fill_colors) +
+  scale_pattern_manual(values = pattern_values) +
+  labs(
+    title = "ASV Distribution by Database and Site",
+    x = "Database",
+    y = "Number of ASVs",
+    fill = "Category",
+    pattern = "Category"
+  ) +
+  guides(
+    pattern = guide_legend(
+      override.aes = list(
+        fill = c("darkgrey", "white", "white"),
+        pattern = c("none", "stripe", "none"),
+        pattern_fill = "black",
+        pattern_density = 0.05,
+        pattern_spacing = 0.04,
+        color = "black"
+      )
+    )
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1),
+    strip.text = element_text(size = 12, face = "bold")
+  )
+
+ggsave(filename = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Fig_stackedASVs_besthits.pdf",width = 40, height = 20, unit = "cm", dpi = 300)
+
+
+### BEST_HIT by Species
+
+# Summarize to inspect
+extract_species_data <- function(df) {
+  df %>%
+    select(contains("species_"), contains("_recorded_")) %>%
+    distinct()
+}
+cocos_species_df <- extract_species_data(cocos.bh)
+coiba_species_df <- extract_species_data(coiba.bh)
+revis_species_df <- extract_species_data(revis.bh)
+
+write.table(revis_species_df, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/revis_species_df.csv", sep = ",", row.names = FALSE, quote = FALSE) 
+write.table(cocos_species_df, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/cocos_species_df.csv", sep = ",", row.names = FALSE, quote = FALSE) 
+write.table(coiba_species_df, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/coiba_species_df.csv", sep = ",", row.names = FALSE, quote = FALSE) 
+
+
+
+summarize_species_recorded <- function(df_species) {
+  df_species %>%
+    pivot_longer(
+      cols = contains("_recorded_"),
+      names_to = "Column",
+      values_to = "Value"
+    ) %>%
+    group_by(Column) %>%
+    summarise(
+      n_species = n_distinct(species_all),
+      n = sum(!is.na(Value)),
+      yes = sum(Value == "Yes", na.rm = TRUE),
+      no = sum(Value == "No", na.rm = TRUE),
+      prop_yes = yes / n,
+      .groups = "drop"
+    )
+}
+
+cocos_species_summary <- summarize_species_recorded(cocos_species_df) %>% mutate(Site = "Cocos")
+coiba_species_summary <- summarize_species_recorded(coiba_species_df) %>% mutate(Site = "Coiba")
+revis_species_summary <- summarize_species_recorded(revis_species_df) %>% mutate(Site = "Revis")
+
+combined_species_summary <- bind_rows(
+  cocos_species_summary,
+  coiba_species_summary,
+  revis_species_summary
+) %>%
+  mutate(
+    database = case_when(
+      str_detect(Column, "species_all") ~ "Whole BOLD",
+      str_detect(Column, "species_TEPonly") ~ "BOLD with TEP records",
+      str_detect(Column, "species_TEP") ~ "BOLD with TEP species",
+      str_detect(Column, "species_unesco") ~ "Whole BOLD unesco",
+      TRUE ~ NA_character_
+    ),
+    `Record list` = case_when(
+      str_detect(Column, "_TEPonly") ~ "Whole TEP",
+      str_detect(Column, "_TEP") ~ "Whole TEP",
+      str_detect(Column, "_Cocos") ~ "Cocos",
+      str_detect(Column, "_Coiba") ~ "Coiba",
+      str_detect(Column, "_Revis") ~ "Revis",
+      TRUE ~ NA_character_
+    )
+  )
+
+#####################################################
+######## Make similar stacked barplot
+
+summary_for_species_barplot <- combined_species_summary %>%
+  group_by(Site, database) %>%
+  summarise(
+    total_species = max(n),
+    TEP_species = sum(yes[grepl("_TEP$", Column)]),
+    Recorded.locally = sum(yes[grepl(paste0("_", unique(Site), "$"), Column)]),
+    .groups = "drop"
+  )
+
+stacked_species_data <- summary_for_species_barplot %>%
+  mutate(
+    Not.recorded.in.TEP = total_species - TEP_species,
+    Recorded.in.TEP = TEP_species - Recorded.locally
+  ) %>%
+  select(Site, database, Recorded.locally, Recorded.in.TEP, Not.recorded.in.TEP) %>%
+  pivot_longer(cols = -c(Site, database), names_to = "Category", values_to = "Count")
+
+# Reorder databases
+stacked_species_data$database <- factor(
+  stacked_species_data$database,
+  levels = c(
+    "Whole BOLD unesco",
+    "Whole BOLD",
+    "BOLD with TEP species",
+    "BOLD with TEP records"
+  )
+)
+
+# Define fill colors and patterns
+fill_colors <- c(
+  "Not.recorded.in.TEP" = "darkgrey",
+  "Recorded.in.TEP" = "white",
+  "Recorded.locally" = "white"
+)
+
+pattern_values <- c(
+  "Not.recorded.in.TEP" = "none",
+  "Recorded.in.TEP" = "stripe",
+  "Recorded.locally" = "none"
+)
+
+
+stacked_species_plot <- ggplot(stacked_species_data, aes(x = database, y = Count)) +
+  # Draw full bar outlines
+  geom_bar(
+    stat = "identity",
+    data = stacked_species_data %>%
+      group_by(Site, database) %>%
+      summarise(Count = sum(Count), .groups = "drop"),
+    fill = NA,
+    color = "black",
+    linewidth = 0.6
+  ) +
+  
+  # Overlay stacked patterned bars
+  geom_bar_pattern(
+    aes(fill = Category, pattern = Category),
+    stat = "identity",
+    color = NA,
+    pattern_fill = "black",
+    pattern_density = 0.05,
+    pattern_spacing = 0.025,
+    pattern_key_scale_factor = 0.6,
+    pattern_alpha = 0.5
+  ) +
+  
+  facet_wrap(~ Site) +
+  scale_fill_manual(values = fill_colors) +
+  scale_pattern_manual(values = pattern_values) +
+  labs(
+    title = "Species Distribution by Database and Site",
+    x = "Database",
+    y = "Number of Species",
+    fill = "Category",
+    pattern = "Category"
+  ) +
+  guides(
+    pattern = guide_legend(
+      override.aes = list(
+        fill = c("darkgrey", "white", "white"),
+        pattern = c("none", "stripe", "none"),
+        pattern_fill = "black",
+        pattern_density = 0.05,
+        pattern_spacing = 0.04,
+        color = "black"
+      )
+    )
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1),
+    strip.text = element_text(size = 12, face = "bold")
+  )
+
+
+ggsave(
+  filename = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Fig_stackedSpecies_besthits.pdf",
+  plot = stacked_species_plot,
+  width = 40,
+  height = 20,
+  units = "cm",
+  dpi = 300
+)
+
+
+# Going back to the output of Best_hits_range, I want to summarize the data to be able to make a graph that displays
+# the number of ASVs with one unabiguous species as best hit (>98%), 2 species, and more than 2 species
+# The dataframes are called cocos, coiba and revis
+
+# Define your dataframes and their corresponding site labels
+data_list <- list(
+  Cocos = cocos,
+  Coiba = coiba,
+  Revis = revis
+)
+
+# Function to summarize hits per row for a given dataframe and db
+summarize_species_hits <- function(df, site_name, db_prefix) {
+  species_cols <- grep(paste0("species_", db_prefix, "\\.[1-5]$"), names(df), value = TRUE)
+  
+  df %>%
+    mutate(recorded_count = rowSums(!is.na(select(., all_of(species_cols))))) %>%
+    mutate(recorded_bin = case_when(
+      recorded_count == 1 ~ "1 species",
+      recorded_count == 2 ~ "2 species",
+      recorded_count > 2  ~ ">2 species",
+      TRUE ~ "0 species"
+    )) %>%
+    count(recorded_bin) %>%
+    mutate(site = site_name, database = db_prefix)
+}
+
+# All databases you want to process
+db_list <- c("all", "TEP", "TEPonly")
+
+# Loop through all site × database combinations
+final_summary <- map_dfr(names(data_list), function(site) {
+  df <- data_list[[site]]
+  map_dfr(db_list, function(db) {
+    summarize_species_hits(df, site, db)
+  })
+})
+
+# Pivot wider for a clean table
+summary_species_bhr <- final_summary %>%
+  pivot_wider(names_from = recorded_bin, values_from = n, values_fill = 0)
+
+print(summary_species_bhr)
+
+#####################################################
+######## Make stacked barplot
+
+# 1. Pivot wider to long format
+summary_species_long <- summary_species_bhr %>%
+  pivot_longer(
+    cols = c(`0 species`, `1 species`, `2 species`, `>2 species`),
+    names_to = "SpeciesCountCategory",
+    values_to = "Count"
+  )
+
+# 2. Filter out "0 species" BEFORE setting factor levels or recoding
+summary_species_filtered <- summary_species_long %>%
+  filter(SpeciesCountCategory != "0 species") %>%
+  
+  # 3. Set factor levels for stacking order
+  mutate(
+    SpeciesCountCategory = factor(
+      SpeciesCountCategory,
+      levels = c(">2 species", "2 species", "1 species")
+    ),
+    
+    # 4. Rename database levels
+    database = recode(
+      database,
+      "all" = "Whole BOLD",
+      "TEP" = "BOLD with TEP species",
+      "TEPonly" = "BOLD with TEP records"
+    )
+  )
+
+fill_colors <- c(
+  "1 species" = "white",
+  "2 species" = "lightgrey",
+  ">2 species" = "grey40"
+)
+
+pattern_values <- c(
+  "1 species" = "none",
+  "2 species" = "none",
+  ">2 species" = "none"
+)
+
+summary_species_filtered$database <- factor(
+  summary_species_filtered$database,
+  levels = c("Whole BOLD", "BOLD with TEP species", "BOLD with TEP records")
+)
+
+stackednoSpecies_besthitrange_plot <- ggplot(summary_species_filtered, aes(x = database, y = Count)) +
+  # Outline full bars
+  geom_bar(
+    stat = "identity",
+    data = summary_species_filtered %>%
+      group_by(site, database) %>%
+      summarise(Count = sum(Count), .groups = "drop"),
+    fill = NA,
+    color = "black",
+    linewidth = 0.6
+  ) +
+  
+  # Stacked bars
+  geom_bar_pattern(
+    aes(fill = SpeciesCountCategory, pattern = SpeciesCountCategory),
+    stat = "identity",
+    color = NA,
+    pattern_density = 0.05,
+    pattern_spacing = 0.025,
+    pattern_key_scale_factor = 0.6,
+    pattern_alpha = 0.5
+  ) +
+  
+  facet_wrap(~ site) +
+  scale_fill_manual(values = fill_colors) +
+  scale_pattern_manual(values = pattern_values) +
+  labs(
+    x = "Database",
+    y = "Number of ASVs",
+    fill = ">98% similarity match",
+    pattern = ">98% similarity match"
+  ) +
+  guides(
+    fill = guide_legend(
+      override.aes = list(
+        fill = fill_colors[levels(summary_species_filtered$SpeciesCountCategory)],
+        color = "black"  # <-- this adds the black border
+      )
+    )
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1),
+    strip.text = element_text(size = 12, face = "bold")
+  )
+
+ggsave(
+  filename = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Fig_stackednoSpecies_besthitrange.pdf",
+  plot = stackednoSpecies_besthitrange_plot,
+  width = 40,
+  height = 20,
+  units = "cm",
+  dpi = 300
+)
+
+
+# Now I will examine the ASVs that are hitting multiple species at >98%
+
+# Create filtered dataframes and combine them
+filter_multiple_species <- function(df) {
+  df %>%
+    rowwise() %>%
+    filter(
+      sum(!is.na(c_across(starts_with("species_all.") & ends_with(as.character(1:5))))) > 1 |
+        sum(!is.na(c_across(starts_with("species_TEP.") & ends_with(as.character(1:5))))) > 1 |
+        sum(!is.na(c_across(starts_with("species_TEPonly.") & ends_with(as.character(1:5))))) > 1
+    ) %>%
+    ungroup()
+}
+
+# Apply to each dataframe
+cocos_filtered <- filter_multiple_species(cocos)
+coiba_filtered <- filter_multiple_species(coiba)
+revis_filtered <- filter_multiple_species(revis)
+
+# Add site labels before combining (optional but recommended)
+cocos_filtered$Site <- "Cocos"
+coiba_filtered$Site <- "Coiba"
+revis_filtered$Site <- "Revis"
+
+# Combine all into one dataframe
+combined_filtered <- bind_rows(cocos_filtered, coiba_filtered, revis_filtered)
+
+collapsed_df <- combined_filtered %>%
+  group_by(across(-Query)) %>%
+  summarise(
+    n_queries = n(),                         # number of queries
+    Queries = paste(Query, collapse = ", "), # list of queries
+    .groups = "drop"
+  )
+
+write.table(collapsed_df, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments.txt", sep = "\t", row.names = FALSE, quote = FALSE) 
+
+
+
+
+# Keep the rows that have more than one species for any of the three databases
+# A species is recorded when it is not "NA".
+
+
+# --- 1. Function to filter rows with >1 species hit for a given database ---
+filter_by_database <- function(df, db_prefix) {
+  pattern <- paste0("species_", db_prefix, "\\.[1-5]$")
+  df %>%
+    rowwise() %>%
+    filter(sum(!is.na(c_across(matches(pattern)))) > 1) %>%
+    ungroup()
+}
+
+# --- 2. Function to retain only relevant columns for that database ---
+filter_clean_tag <- function(df, site, db_prefix) {
+  # Get species columns for this database
+  species_cols <- grep(paste0("^species_", db_prefix, "\\.[1-5]$"), colnames(df), value = TRUE)
+  recorded_cols <- grep(paste0("^species_", db_prefix, "\\.[1-5]\\.recorded"), colnames(df), value = TRUE)
+  
+  # Keep: Query, family/genus columns, this db’s species columns, and later add Site and Database
+  keep_cols <- c("Query",
+                 grep("^family", colnames(df), value = TRUE),
+                 grep("^genus", colnames(df), value = TRUE),
+                 species_cols,
+                 recorded_cols)
+  
+  df %>%
+    filter_by_database(db_prefix) %>%
+    select(all_of(keep_cols)) %>%
+    mutate(Site = site, Database = db_prefix)
+}
+
+# --- 3. Apply to each site x database ---
+filtered_all <- bind_rows(
+  filter_clean_tag(cocos, "Cocos", "all"),
+  filter_clean_tag(coiba, "Coiba", "all"),
+  filter_clean_tag(revis, "Revis", "all")
+)
+
+filtered_TEP <- bind_rows(
+  filter_clean_tag(cocos, "Cocos", "TEP"),
+  filter_clean_tag(coiba, "Coiba", "TEP"),
+  filter_clean_tag(revis, "Revis", "TEP")
+)
+
+filtered_TEPonly <- bind_rows(
+  filter_clean_tag(cocos, "Cocos", "TEPonly"),
+  filter_clean_tag(coiba, "Coiba", "TEPonly"),
+  filter_clean_tag(revis, "Revis", "TEPonly")
+)
+
+# --- 4. Collapse queries ---
+collapse_queries <- function(df) {
+  df %>%
+    group_by(across(-Query)) %>%
+    summarise(
+      n_queries = n(),
+      Queries = paste(Query, collapse = ", "),
+      .groups = "drop"
+    )
+}
+
+collapsed_all <- collapse_queries(filtered_all)
+collapsed_TEP <- collapse_queries(filtered_TEP)
+collapsed_TEPonly <- collapse_queries(filtered_TEPonly)
+
+# --- 5. Write to files ---
+write.table(collapsed_all, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_all.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(collapsed_TEP, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_TEP.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(collapsed_TEPonly, file = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_TEPonly.txt", sep = "\t", row.names = FALSE, quote = FALSE)
+
+
+#####################################################
+######## Make stacked barplot of categories added manually
+
+# Edit manually to add categories that correspond to WHY possibly there are multiple assignments
+
+amb1 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_all_DRR.csv"
+Ambiguous_all_new <- read.csv(amb1, header=TRUE, sep=",", row.names = NULL)
+Ambiguous_all_new <- Ambiguous_all_new[!Ambiguous_all_new$Category %in% c("Remove", "Putative"), ]
+
+amb2 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_TEP.csv"
+Ambiguous_TEP_new <- read.csv(amb2, header=TRUE, sep=",", row.names = NULL)
+Ambiguous_TEP_new <- Ambiguous_TEP_new[!Ambiguous_TEP_new$Category %in% c("Remove", "Putative"), ]
+
+amb3 <- "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Ambiguous_assignments_TEPonly.csv"
+Ambiguous_TEPonly_new <- read.csv(amb3, header=TRUE, sep=",", row.names = NULL)
+Ambiguous_TEPonly_new <- Ambiguous_TEPonly_new[!Ambiguous_TEPonly_new$Category %in% c("Remove", "Putative"), ]
+
+# colnames(Ambiguous_all_new)
+# str(Ambiguous_all_new)
+# str(Ambiguous_TEP_new)
+# str(Ambiguous_TEPonly_new)
+
+Ambiguous_all_new$Database <- "Whole BOLD"
+Ambiguous_TEP_new$Database <- "BOLD with TEP species"
+Ambiguous_TEPonly_new$Database <- "BOLD with TEP records"
+
+common_cols <- intersect(names(Ambiguous_all_new), names(Ambiguous_TEPonly_new))
+Ambiguous_all_new <- Ambiguous_all_new[, common_cols]
+Ambiguous_TEP_new <- Ambiguous_TEP_new[, common_cols]
+Ambiguous_TEPonly_new <- Ambiguous_TEPonly_new[, common_cols]
+
+Ambiguous_combined <- rbind(
+  Ambiguous_all_new,
+  Ambiguous_TEP_new,
+  Ambiguous_TEPonly_new
+)
+
+
+plot_data <- Ambiguous_combined %>%
+  group_by(Database, Site, Category) %>%
+  summarise(N = n()) %>%
+  ungroup()
+
+
+# Set the order of factors for consistent appearance
+plot_data$Site <- factor(plot_data$Site, levels = c("Cocos", "Coiba", "Revis"))
+plot_data$Database <- factor(plot_data$Database, levels = c("Whole BOLD", "BOLD with TEP species", "BOLD with TEP records"))
+
+# Assign colors to each category
+category_colors <- c(
+  "Closely related TEP" = "#C6DBEF",          # Light blue
+  "Closely related transisthmian" = "#6BAED6", # Medium blue
+  "Closely related transpacific" = "#2171B5",  # Darker blue
+  "Synonym" = "#FFD700",                      # Gold/yellow
+  "Mislabeled" = "#FDAE6B"                    # Soft orange
+)
+
+plot_data$Category <- factor(plot_data$Category,
+                             levels = c("Mislabeled","Synonym","Closely related transpacific","Closely related transisthmian","Closely related TEP"
+                             )
+)
+
+Category_plot <- ggplot(plot_data, aes(x = Database, y = N, fill = Category)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~Site, nrow = 1, strip.position = "top") +
+  theme_minimal(base_size = 14) +
+  scale_fill_manual(values = category_colors) +
+  labs(x = "Database", y = "Number of species", fill = "Category") +
+  theme(
+    strip.text = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(angle = 30, hjust = 1),
+    panel.grid.major.x = element_blank()
+  )
+
+ggsave(filename = "~/Dropbox (Personal)/STRI_Ross_fish/c_summary_analyses/Fig_stackedASVs_categories.pdf",width = 40, height = 20, unit = "cm", dpi = 300)
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+---
+title: ""
+page-layout: article
+page-classes: projects
+toc: true
+toc-title: "Current"
+toc-location: left
+toc-depth: 2
+number-sections: false
+editor: source
+---
+
+## Digest {.project-title}
+
+### *Revealing the changing trophic niches of large herbivorous fish on modern coral reefs*
+
+On coral reefs, herbivorous fishes strongly influence benthic community dynamics by controlling algal assemblages that compete with corals for space. Herbivores span a wide range of feeding modes, from grazing filamentous algae to scraping and excavating the reef framework. This functional diversity likely promotes niche partitioning, facilitates coexistence, and supports high herbivore diversity despite limited food resources. However, traditional approaches such as behavioral observations, gut-content microscopy, and small-scale experiments provide only a partial view of realized trophic niches.
+
+### Objectives
+
+In this project, we combine DNA metabarcoding of gut contents, complementary diet tracers, and detailed field observations to address:
+
+-   What is the degree of trophic niche partitioning among herbivorous fishes across three biogeographic regions (Central Pacific, Tropical Eastern Pacific, Caribbean)?
+-   How do trophic niches shift as reef communities degrade and become dominated by algae and cyanobacteria along gradients of human impact?
+-   To what extent do functional redundancies among herbivores buffer key ecosystem functions under environmental change?
+
+### Collaborators
+
+:::::::: collab-grid
+::: collab-card
+**Douglas Rasher**\
+*Bigelow Laboratory for Ocean Sciences, USA*\
+**Community Ecology**\
+[Visit website](https://www.bigelow.org/about/people/dr-douglas-rasher.html){.collab-link target="_blank"}
+:::
+
+::: collab-card
+**Jordan Casey**\
+*University of Texas at Austin, USA*\
+**Marine Trophic Ecology**\
+[Visit website](https://www.caseylab.org/){.collab-link target="_blank"}
+:::
+
+::: collab-card
+**Tom Adam**\
+*University of California, Santa Barbara, USA*\
+**Community Ecology**\
+[Visit website](https://labs.eemb.ucsb.edu/adam/tom/){.collab-link target="_blank"}
+:::
+
+::: collab-card
+**Deron Burkepile**\
+*University of California, Santa Barbara, USA*\
+**Community Ecology**\
+[Visit website](https://burkepilelab.eemb.ucsb.edu/){.collab-link target="_blank"}
+:::
+
+::: collab-card
+**Sara Swaminathan**\
+*Bigelow Laboratory for Ocean Sciences, USA*\
+**Community Ecology**\
+[Visit website](https://www.bigelow.org/about/people/sara-swaminathan.html){.collab-link target="_blank"}
+:::
+::::::::
+
+## IstmoBiome {.project-title}
+
+### **The evolution of host associated microbiomes separated by the Isthmus of Panama**
+
+The closure of the Isthmus of Panama, approximately 3 million years ago, presents an unrivaled opportunity to study processes of diversification and adaptation in the sea. An ancient ocean was split up into the Pacific and the Caribbean Sea, two environments with strikingly different geophysical characteristics. **Populations of animals, plants and their microbial symbionts got separated and followed separate evolutionary trajectories in response to new and contrasting environments**: the Caribbean became warmer, saltier and nutrient poor, whereas the Tropical Eastern Pacific became more acidic with seasonal fluctuations in temperature and nutrients caused by upwelling of deep water when trade-winds blow.
+
+Extensive studies have used this natural experiment to examine evolutionary processes relating to molecular divergence and speciation of shallow-water marine macro-organisms in the two oceans, using pairs of sister species, one in the Western Atlantic (WA) and one TEP. In contrast to the macrofauna and flora, nothing was known about how the isthmian divergence has shaped the evolution of the microbiomes of sister hosts.
+
+### Objectives
+
+We take advantage of the isthmian experiment, leveraging extensive studies on the marine biology of hosts and their environments, to address key questions relating to the evolutionary divergence of marine microbiomes in changing environments and their functional significance such as:
+
+-   What is the contribution of host phylogenetic relatedness, host traits such as diet or behavior, and environmental factors in shaping the structure of marine microbiomes in sister hosts from two different oceans?
+
+<!-- -->
+
+-   Which microbes co-evolve with their hosts across the isthmus, indicating a long-term association? What is the functional significance of these co-diverging microbes and their potential roles in host adaptation and ecological interactions?
+
+<!-- -->
+
+-   How do host-associated microbes adapted to the distinct environmental conditions in the WA and TEP, and what are the potential mechanisms underlying their adaptation? Is there evidence for convergent evolution of microbiomes in response to similar environmental pressures in different geographic locations?
+
+<!-- -->
+
+-   How do microbial symbionts influence hosts’ resistance and resilience to environmental changes? Do symbionts associating with hosts in one ocean provide greater resilience and adaptability to environmental fluctuations than symbionts in the other ocean? And what are the underlying mechanisms behind these differences?
+
+## Reef Resilience {.project-title}
+
+### *Mechanisms and solutions for coral reef resilience*
+
+Rohr Reef Resilience integrates long-term monitoring, field experiments, and -omics tools to understand why some coral populations and reef communities resist, tolerate, or recover from disturbances.
+
+Key themes include:
+
+-   Coral–algal–microbial symbioses under thermal stress and local disturbance.
+-   The role of herbivores, water quality, and connectivity in mediating resilience.
+-   Co-design of interventions and management strategies with conservation partners.
+
+*(Add study locations, flagship experiments, major findings, and partner links.)*
+
+## Seamount {.project-title}
+
+### *Hidden biodiversity on offshore seamounts*
+
+This project uses eDNA, imaging, and targeted sampling to reveal the biodiversity and ecological roles of remote seamount ecosystems.
+
+Key themes include:
+
+-   Characterizing pelagic and benthic communities on poorly known seamounts.
+-   Understanding connectivity, endemism, and links to regional fisheries.
+-   Developing and validating deep-water eDNA protocols and reference resources.
+
+*(Add focal regions, discoveries, and conservation implications.)*
+
+## eCSI {.project-title}
+
+### *Non-invasive monitoring of threatened megafauna*
+
+eCSI develops and applies eDNA tools to monitor sharks and rays in data-poor regions, supporting evidence-based conservation.
+
+Key themes include:
+
+-   Sensitive detection of threatened and cryptic species using targeted and metabarcoding assays.
+-   Generating spatial and temporal data to inform MPAs, fisheries management, and bycatch mitigation.
+-   Building regional capacity and partnerships for long-term eDNA-based monitoring.
+
+*(Add markers used, collaborating institutions, and examples of policy or management impact.)*
