@@ -19,7 +19,7 @@ website:
       - text: "Resources"
         href: Resources.qmd
       - text: "Join us"
-        href: Join.qmd
+        href: join-us.qmd
 
 format:
   html:
