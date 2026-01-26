@@ -12,7 +12,7 @@ editor: source
 
 ## Digest {.project-title}
 
-### *Revealing the changing trophic niches of large herbivorous fish on modern coral reefs*
+### *Changing trophic niches of large herbivorous fish*
 
 On coral reefs, herbivorous fishes strongly influence benthic community dynamics by controlling algal assemblages that compete with corals for space. Herbivores span a wide range of feeding modes, from grazing filamentous algae to scraping and excavating the reef framework. This functional diversity likely promotes niche partitioning, facilitates coexistence, and supports high herbivore diversity despite limited food resources. However, traditional approaches such as behavioral observations, gut-content microscopy, and small-scale experiments provide only a partial view of realized trophic niches.
 
@@ -20,7 +20,7 @@ On coral reefs, herbivorous fishes strongly influence benthic community dynamics
 
 In this project, we combine DNA metabarcoding of gut contents, complementary diet tracers, and detailed field observations to address:
 
--   What is the degree of trophic niche partitioning among herbivorous fishes across three biogeographic regions (Central Pacific, Tropical Eastern Pacific, Caribbean)?
+-   What is the degree of trophic niche partitioning among Caribbean herbivorous fish species?
 -   How do trophic niches shift as reef communities degrade and become dominated by algae and cyanobacteria along gradients of human impact?
 -   To what extent do functional redundancies among herbivores buffer key ecosystem functions under environmental change?
 
@@ -93,15 +93,15 @@ We take advantage of the isthmian experiment, leveraging extensive studies on th
 
 ### *Mechanisms and solutions for coral reef resilience*
 
-Rohr Reef Resilience integrates long-term monitoring, field experiments, and -omics tools to understand why some coral populations and reef communities resist, tolerate, or recover from disturbances.
+In this project, we integrate long-term monitoring, field experiments, and -omics tools to understand why some coral populations and reef communities resist, tolerate, or recover from disturbances.
 
 Key themes include:
 
 -   Coral–algal–microbial symbioses under thermal stress and local disturbance.
--   The role of herbivores, water quality, and connectivity in mediating resilience.
--   Co-design of interventions and management strategies with conservation partners.
 
-*(Add study locations, flagship experiments, major findings, and partner links.)*
+-   The role of herbivores, water quality, and connectivity in mediating resilience.
+
+-   Co-design of interventions and management strategies with conservation partners.
 
 ## Seamount {.project-title}
 
@@ -112,10 +112,10 @@ This project uses eDNA, imaging, and targeted sampling to reveal the biodiversit
 Key themes include:
 
 -   Characterizing pelagic and benthic communities on poorly known seamounts.
--   Understanding connectivity, endemism, and links to regional fisheries.
--   Developing and validating deep-water eDNA protocols and reference resources.
 
-*(Add focal regions, discoveries, and conservation implications.)*
+-   Understanding connectivity, endemism, and links to regional fisheries.
+
+-   Developing and validating deep-water eDNA protocols and reference resources.
 
 ## eCSI {.project-title}
 
@@ -128,5 +128,3 @@ Key themes include:
 -   Sensitive detection of threatened and cryptic species using targeted and metabarcoding assays.
 -   Generating spatial and temporal data to inform MPAs, fisheries management, and bycatch mitigation.
 -   Building regional capacity and partnerships for long-term eDNA-based monitoring.
-
-*(Add markers used, collaborating institutions, and examples of policy or management impact.)*

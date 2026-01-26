@@ -194,6 +194,11 @@ body {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* Remove link underline between social icons */
+.team-member a {
+  text-decoration: none !important;
+}
+
 .team-member a img:hover {
   transform: scale(1.1);
   opacity: 0.95;
@@ -656,3 +661,4 @@ body.projects h3 {
   color: #293d58;
   margin-top: 1.5rem;
 }
+

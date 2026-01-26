@@ -3,9 +3,26 @@ title: "Publications"
 toc: true           # enable table of contents
 ---
 
+## 2026
+
+<ol reversed start="60">
+
+<li>
+
+Connelly MT, Glynn VM, Cornejo A, Villalobos-Cubero T, Kleypas J, Alvarado JJ, Brandt M, Logan CA, Palacio-Castro AM, Flot JF, Leray M, Connolly SR, Quattrini AM. 2025. *Genome skimming illuminates hidden species diversity and Symbiodiniaceae associations in east Pacific Pocillopora corals.* **Genome Biology and Evolution** In Press
+
+
+</ol>
+
+------------------------------------------------------------------------
+
 ## 2025
 
-<ol reversed start="58">
+<ol reversed start="59">
+
+<li>
+
+Hultgren KM, Paulay G, Cummings B, Leray M, Winans G. 2025. *Salish Sea crustacean biodiversity is remarkably high and increases with oceanic influences.* **Marine Biodiversity** 55, 121
 
 <li>
 

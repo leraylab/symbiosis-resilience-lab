@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - Images/
 
 website:
   title: "Symbiosis & Resilience Laboratory"
