@@ -1,0 +1,26 @@
+{
+  "join-us.qmd": {
+    "join-us.html": "3d56a35e"
+  },
+  "Team.qmd": {
+    "Team.html": "2fae71f0"
+  },
+  "Projects.qmd": {
+    "Projects.html": "4f7127e4"
+  },
+  "index.qmd": {
+    "index.html": "0449e38b"
+  },
+  "Publications.qmd": {
+    "Publications.html": "1a811689"
+  },
+  "about.qmd": {
+    "about.html": "6bdb21c5"
+  },
+  "Resources.qmd": {
+    "Resources.html": "3e9486a8"
+  },
+  "News.qmd": {
+    "News.html": "990f3e77"
+  }
+}

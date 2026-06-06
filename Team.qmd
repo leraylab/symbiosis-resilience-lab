@@ -1,0 +1,314 @@
+---
+title: "Our Team"
+toc: true
+---
+
+## Lead PI
+
+:::: team-grid
+::: team-member
+![](Images/Matthieu-Leray.jpg){width="200"}
+
+**Dr. Matthieu Leray**\
+Principal Investigator. Interested in marine biodiversity, symbiosis, and conservation genomics.
+
+🏛️ [HKU](https://www.scifac.hku.hk/people/leray-matthieu)\
+<a href="https://leraylab.github.io/symbiosis-resilience-lab/" target="_blank" rel="noopener"><img src="Images/Personal-site.png" width="25"/></a>
+<a href="https://www.instagram.com/leraylab/" target="_blank" rel="noopener"><img src="Images/Instagram.png" width="25"/></a>
+<a href="https://www.linkedin.com/in/matthieu-leray-a013406a/" target="_blank" rel="noopener"><img src="Images/LinkedIn.png" width="25"/></a>
+<a href="https://bsky.app/profile/mattleray.bsky.social" target="_blank" rel="noopener"><img src="Images/Bluesky.png" width="25"/></a>
+<a href="https://x.com/Matt_Leray" target="_blank" rel="noopener"><img src="Images/X.png" width="25"/></a>
+
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Graduate Students
+
+:::::::::: team-grid
+::: team-member
+![](Images/Helio-Quintero.jpg){width="200"}
+
+**Helio Quintero**\
+PhD student exploring the diversity and distribution of elasmobranchs using eDNA.
+
+<a href="https://www.instagram.com/helemiqa/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/helio-quintero-arrieta-876056213/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://scholar.google.com/citations?hl=en&user=y2zm_gwAAAAJ" target="_blank" rel="noopener">
+  <img src="Images/Google_Scholar.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Laura-Lardinois.jpeg){width="200"}
+
+**Laura Lardinois**\
+PhD student studying the ecology and evolution of coral reef fish microbiomes.
+
+<a href="https://www.linkedin.com/in/laura-lardinois-715200328/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Luisa-Meister.png){width="200"}
+
+**Luisa Meister**\
+PhD student studying the shifting functional roles of herbivorous fish in the Anthropocene.
+
+<a href="https://www.instagram.com/luisameistro/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/luisa-meister/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+:::
+
+::: team-member
+![](Images/Maria-Alejandra-Sanchez.jpg){width="200"}
+
+**Maria Alejandra Sanchez**\
+PhD student studying the influence of abiotic and biotic factors on the structure of invertebrate assemblages on coral reefs.
+
+<a href="https://www.instagram.com/mary_asz/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Natasha-Hinojosa.jpeg){width="200"}
+
+**Natasha Hinojosa**\
+PhD student studying the evolution of trophic traits in coral reef fishes.
+
+<a href="https://natashahinojosa.weebly.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.instagram.com/ladelos_peces/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/natasha-hinojosa-98b509135/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://scholar.google.com/citations?hl=en&user=xFiXE94AAAAJ" target="_blank" rel="noopener">
+  <img src="Images/Google_Scholar.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Paige-Smallman.png){width="200"}
+
+**Paige Smallman**\
+PhD student applying conservation genomics tools for understanding the vulnerability of marine fishes.
+
+<a href="https://www.paigesmallman.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.instagram.com/paige.smallman/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/paige-smallman/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Tess-Morelli.png){width="200"}
+
+**Tess Morelli**\
+PhD student studying the effects of local and global environmental stressors on a marine symbiosis.
+
+<a href="https://www.instagram.com/tess_morelli/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/tess-morelli-7b3222242/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://x.com/MorelliTess" target="_blank" rel="noopener">
+  <img src="Images/X.png" width="25"/>
+</a>
+
+:::
+::::::::::
+
+------------------------------------------------------------------------
+
+
+## Affiliated Students
+
+:::: team-grid
+::: team-member
+![](Images/Matthew-Doherty.png){width="200"}
+
+**Matthew Doherty**\
+PhD student studying the effect of rising sea surface temperatures on coral reefs
+
+<a href="https://scholar.google.com/citations?user=IwY7XeMAAAAJ&hl=en" target="_blank" rel="noopener">
+  <img src="Images/Google_Scholar.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/MartheStein.jpg){width="200"}
+
+**Marthe Stein**\
+Masters student studying niche partitioning in a group of coral reef fish
+
+<a href="https://marthe-stein.jimdosite.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.instagram.com/_s.marthe_/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/marthe-stein-26b863232/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/LisaZimmermann.jpeg){width="200"}
+
+**Lisa Zimmermann**\
+Masters student studying the influence of temperature on coral-algal symbioses
+
+<a href="https://www.lisaabigailzimmermann.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.instagram.com/hairygail/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/lisa-zimmermann-924218273/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/VivianeAli.jpg){width="200"}
+
+**Viviane G. Alí Suarez**\
+Conducting research on coral symbiosis
+
+<a href="https://www.instagram.com/viv3ali/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/YalianaChichaco.jpeg){width="200"}
+
+**Yaliana Chichaco**\
+Conducting research on the distribution of largetooth sawfish using eDNA
+
+<a href="https://www.instagram.com/yalianaachichaco/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/yaliana-chichaco-1585b3215/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://x.com/yalianachichaco" target="_blank" rel="noopener">
+  <img src="Images/X.png" width="25"/>
+</a>
+
+:::
+
+::::
+
+
+
+<hr style="margin:1.5rem 0">
+
+## Past graduate student members
+
+:::: team-grid
+::: team-member
+![](Images/JadeHargous.jpg){width="200"}
+
+**Jade Hargous**\
+Conducted research on the competitive hierarchy among Tropical Eastern Pacific corals
+
+<a href="https://www.instagram.com/jade.hargous/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/jade-hargous-9812b3176/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/Maria_Chacon.jpg){width="200"}
+
+**Maria Chacon**\
+Conducted research on coral symbioses and probiotics
+
+<a href="https://www.instagram.com/mariachaconb6/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/mariachaconb/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/HannahRempel.jpg){width="200"}
+
+**Hannah Sima Rempel**\
+Conducted research on herbivorous fish trophic niches as STRI pre-doctoral fellow
+
+<a href="https://hannahrempel.weebly.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/hannah-rempel/" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://x.com/queenparrotfish" target="_blank" rel="noopener">
+  <img src="Images/X.png" width="25"/>
+</a>
+
+:::
+
+::: team-member
+![](Images/FriederikeClever.jpeg){width="200"}
+
+**Friederike Clever**\
+Conducted PhD research on trophic ecology of coral reef fishes
+
+<a href="https://scholar.google.com/citations?user=k5neqcQAAAAJ&hl=en" target="_blank" rel="noopener">
+  <img src="Images/Google_Scholar.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/friederike-clever-26aa378b/?originalSubdomain=uk" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+<a href="https://bsky.app/profile/cfrederica.bsky.social" target="_blank" rel="noopener">
+  <img src="Images/Bluesky.png" width="25"/>
+</a>
+<a href="https://x.com/Fr_Cle" target="_blank" rel="noopener">
+  <img src="Images/X.png" width="25"/>
+</a>
+
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+<style>
+
+</style>
+
+------------------------------------------------------------------------

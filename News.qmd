@@ -1,0 +1,214 @@
+---
+title: "News"
+toc: true
+toc-title: "Categories"
+---
+
+## 📄 Recent Publications
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Coral reef fish skin microbiome study](Images/Prionurus_laticlavus-10.JPG)
+:::
+::: news-paper-thumb
+![Lardinois et al. 2026 – BMC Microbiology](Images/Publications/Lardinois et al. 2026 BMC.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Host matters: coral reef fish species show distinct skin microbiome responses to upwelling-driven environmental changes**
+
+Lardinois LL, Hinojosa NA, Quintero-Arrieta H, Sellers AJ, Leray M, Barrett RDH.\
+*BMC Microbiology* s12866-026-05036-1
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Environmental DNA sampling in freshwater systems](Images/Picture1.png)
+:::
+::: news-paper-thumb
+![Zhang et al. 2026 – Molecular Ecology](Images/Publications/Zhang et al 2026 Mol Ecol.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Integrated reanalysis of global riverine fish eDNA datasets shows robustness and congruence of biodiversity conclusions**
+
+Zhang Y, Zhang H, Akashi H, et al., Leray M, et al., Pellissier L, Zhang X, Altermatt F.\
+*Molecular Ecology* 35, e70340
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Capistratus parrotfish](Images/Capistratus.jpeg)
+:::
+::: news-paper-thumb
+![Clever et al. 2026 – Journal of Animal Ecology](Images/Publications/Clever et al. 2026 JAE.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Dietary resilience of coral reef fishes to habitat degradation**
+
+Clever F, Preziosi RF, Nguyen B, De Gracia B, Quintero H, McMillan WO, Altieri AH, O'Dea A, Knowlton N, Leray M.\
+*Journal of Animal Ecology* 95, 397-417
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Pocillopora coral colony in the Tropical Eastern Pacific](Images/Coral-banner.JPG)
+:::
+::: news-paper-thumb
+![Connelly et al. 2026 – Genome Biology and Evolution](Images/Publications/Connelly et al. 2026 GBE.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Genome skimming illuminates hidden species diversity and Symbiodiniaceae associations in east Pacific *Pocillopora* corals**
+
+Connelly MT, Glynn VM, Cornejo A, Villalobos-Cubero T, Kleypas J, Alvarado JJ, Brandt M, Logan CA, Palacio-Castro AM, Flot JF, Leray M, Connolly SR, Quattrini AM.\
+*Genome Biology and Evolution* 18, evaf235
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Crustacean diversity in the Salish Sea](Images/Trapezia-3.JPG)
+:::
+::: news-paper-thumb
+![Hultgren et al. 2025 – Marine Biodiversity](Images/Trapezia-3.JPG)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2025
+
+**Salish Sea crustacean biodiversity is remarkably high and increases with oceanic influences**
+
+Hultgren KM, Paulay G, Cummings B, Leray M, Winans G.\
+*Marine Biodiversity* 55, 121
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Cryptic marine invertebrates detected by eDNA](Images/Anemone-shrimp.JPG)
+:::
+::: news-paper-thumb
+![Pappalardo et al. 2025 – Methods in Ecology and Evolution](Images/Publications/Pappalardo et al 2025 MEE.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2025
+
+**Taxon-specific BLAST percent identity thresholds for identification of unknown sequences using metabarcoding**
+
+Pappalardo P, Hemmi JM, Machida RJ, Leray M, Collins AG, Osborn KJ.\
+*Methods in Ecology and Evolution* 16, 2380-2394
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Caribbean reef fish assemblage](Images/Angelfish-french.JPG)
+:::
+::: news-paper-thumb
+![O'Dea et al. 2025 – PNAS](Images/Publications/Odea et al 2025 PNAS.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2025
+
+**Prehistoric archives reveal evidence of predator loss and prey release in Caribbean reef fish communities**
+
+O'Dea A, Dillon EM, Brandl SJ, Cramer KL, Cybulski JD, de Gracia B, García-Méndez K, Griswold K, Lin CH, Leray M, Lueders-Dumont JA, Sellers AJ, Wake TA.\
+*Proceedings of the National Academy of Sciences* 122, e2503986122
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Coral reef in the Tropical Eastern Pacific](Images/P1014054.JPG)
+:::
+::: news-paper-thumb
+![Glynn et al. 2025 – Current Biology](Images/Publications/Glynn et al 2025 CurrBiol.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2025
+
+**The role of holobiont composition and environmental history in thermotolerance of Tropical Eastern Pacific corals**
+
+Glynn VM, Fernandes de Barros Marangoni L, Guglielmetti M, Tapia ER, Ali V, Quintero H, Rodriguez Guerra EC, Yuval M, Kline DI, Leray M, Connolly SR, Barrett RDH.\
+*Current Biology* 35, p3048-3063.e7
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Chemosynthetic symbiosis in marine invertebrates](Images/Escudo-worm.JPG)
+:::
+::: news-paper-thumb
+![Morel-Letelier et al. 2025 – MSystems](Images/Escudo-worm.JPG)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2025
+
+**Seasonal transcriptomic shifts reveal metabolic flexibility of chemosynthetic symbionts in an upwelling region**
+
+Morel-Letelier I, Yuen B, Orellana LH, Kück AC, Camacho-García YE, Lara M, Leray M, Wilkins LGE.\
+*MSystems* 10, e01686-24
+::::
+:::::
+
+[View all publications →](Publications.qmd){.button}
+
+---
+
+## 🏕️ Fieldwork & Expeditions
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Aerial view of Moorea, French Polynesia](Images/Moorea-wide-view.jpg)
+:::
+::: news-paper-thumb
+![Fieldwork in Moorea 2024](Images/Moorea-exchange.jpg)
+:::
+::::
+:::: news-item-text
+[Fieldwork]{.badge-field} · 2024
+
+**Moorea field season**
+
+The lab conducted eDNA surveys and coral sampling across the forereef and backreef habitats of Moorea, French Polynesia, as part of the IstmoBiome and Reef Resilience projects.
+::::
+:::::
+
+---
+
+## 🔬 Lab Announcements
+
+*Announcements coming soon — check back for updates on new lab members, grants, and awards.*
+
+---
+
+## 📰 Press & Media
+
+*Press coverage and media features coming soon.*
