@@ -26,7 +26,7 @@ Understanding how ecological interactions fuel resilience in a changing ocean
 :::::
 
 ::: photo-strip
-![](Images/Moorea-wide-view.jpg){.strip-photo alt="Coral reef panorama in Moorea"}
+![](Images/IMG-20260512-WA0130.jpg){.strip-photo alt="Coral reef panorama"}
 ![](Images/Acropora-parrot.JPG){.strip-photo alt="Parrotfish on Acropora coral"}
 ![](Images/STRI-lab-meeting.jpg){.strip-photo alt="Lab team in the field"}
 :::
@@ -118,7 +118,7 @@ Most marine species remain undescribed and difficult to distinguish, particularl
 
 :::: {.research-row .research-row-reverse}
 ::: research-img
-![](Images/Moorea-exchange.jpg)
+![](Images/P1012082.JPG)
 :::
 ::: research-text
 ## 👥 About the Team
@@ -144,7 +144,7 @@ Our research integrates broad-scale environmental sampling, molecular and genomi
 
 :::: {.research-row .research-row-reverse}
 ::: research-img
-![](Images/Moorea-transparent-tall.jpg)
+![](Images/IMG-20260512-WA0139.jpg)
 :::
 ::: research-text
 ## 🎓 Join Us

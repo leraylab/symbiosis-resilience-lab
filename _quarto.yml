@@ -4,6 +4,8 @@ project:
   resources:
     - Images/
     - Images/Publications/
+    - Images/2024-Moorea/
+    - Images/2026-Karimunjawa/
 
 website:
   title: "Symbiosis & Resilience Laboratory"
@@ -34,5 +36,6 @@ format:
     toc-location: left
     toc-depth: 2
     page-layout: full
+    include-after-body: _navbar-fix.html
 
 editor: visual

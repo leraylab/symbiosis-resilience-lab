@@ -275,6 +275,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var brand = document.querySelector('.navbar-brand-container');
+  if (brand) {
+    brand.classList.remove('mx-auto');
+    brand.style.marginLeft = '0';
+    brand.style.marginRight = '1rem';
+  }
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

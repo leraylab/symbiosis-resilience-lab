@@ -186,19 +186,72 @@ Morel-Letelier I, Yuen B, Orellana LH, Kück AC, Camacho-García YE, Lara M, Ler
 ::::: news-item
 :::: news-item-images
 ::: news-field-photo
-![Aerial view of Moorea, French Polynesia](Images/Moorea-wide-view.jpg)
+![Feeding ecology fieldwork in Moorea 2024](Images/2024-Moorea/IMG-20240815-WA0021.jpg)
 :::
 ::: news-paper-thumb
-![Fieldwork in Moorea 2024](Images/Moorea-exchange.jpg)
+![Surgeonfish gut content sampling, Moorea 2024](Images/2024-Moorea/IMG-20240815-WA0031.jpg)
 :::
 ::::
 :::: news-item-text
 [Fieldwork]{.badge-field} · 2024
 
-**Moorea field season**
+**Feeding ecology of herbivorous fish - Moorea, French Polynesia**
 
-The lab conducted eDNA surveys and coral sampling across the forereef and backreef habitats of Moorea, French Polynesia, as part of the IstmoBiome and Reef Resilience projects.
+The lab took part in a field expedition to the island of Moorea to study how the rise of macroalgae changes the feeding behavior of surgeonfish and parrotfish. We conducted feeding observations, collected fish for molecular analyses of gut contents, and sampled macroalgae that these fish potentially eat to supplement reference DNA barcode databases.
 ::::
+
+```{=html}
+<div class="fieldwork-gallery">
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240814-WA0069.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240815-WA0021.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240814-WA0068.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240812-WA0057.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240815-WA0024.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/20240813_151059.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240814-WA0066.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/20240813_124924.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item"><img src="Images/2024-Moorea/IMG-20240815-WA0014.jpg" alt="Moorea fieldwork 2024"></div>
+  <div class="gallery-item gallery-item-video">
+    <video controls playsinline>
+      <source src="Images/2024-Moorea/VID-20240814-WA0070.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+```
+
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
+![Marine biodiversity survey, Karimunjawa 2026](Images/2026-Karimunjawa/IMG-20260515-WA0020.jpg)
+:::
+::: news-paper-thumb
+![Karimunjawa National Park expedition 2026](Images/2026-Karimunjawa/IMG-20260512-WA0144.jpg)
+:::
+::::
+:::: news-item-text
+[Fieldwork]{.badge-field} · 2026
+
+**Marine biodiversity survey of Karimunjawa National Park, Central Java, Indonesia**
+
+We were invited to take part in a workshop that aimed at characterizing patterns of cryptobiome diversity on coral reefs of the National Park using Autonomous Reef Monitoring Structures and eDNA. This was also a great opportunity to discuss future collaborations for research in Indonesia and across the region.
+::::
+
+```{=html}
+<div class="fieldwork-gallery">
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260512-WA0124.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260512-WA0132.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260512-WA0137.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260512-WA0145.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260515-WA0045.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260515-WA0014.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260513-WA0052.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260513-WA0044.jpg" alt="Karimunjawa expedition 2026"></div>
+  <div class="gallery-item"><img src="Images/2026-Karimunjawa/IMG-20260514-WA0042.jpg" alt="Karimunjawa expedition 2026"></div>
+</div>
+```
+
 :::::
 
 ---

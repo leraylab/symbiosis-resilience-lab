@@ -484,6 +484,23 @@ body {
 }
 
 
+/* === HIDE DUPLICATE NAVBAR TITLE === */
+.navbar-title,
+.navbar-brand-title {
+  display: none !important;
+}
+
+/* === HIDE DUPLICATE LOGO (light-content copy shown alongside dark-content) === */
+.navbar .navbar-logo.light-content {
+  display: none !important;
+}
+
+/* === FIX LOGO CENTERING — keep logo left-aligned === */
+.navbar .navbar-brand-container {
+  margin-left: 0 !important;
+  margin-right: 1rem !important;
+}
+
 /* === NAVBAR TEXT SIZE, COLOR, AND SPACING === */
 .navbar-nav .nav-link,
 .navbar a.nav-link,
@@ -673,11 +690,10 @@ body.home main.content {
 
 /* === FINAL ABSOLUTE FIX FOR NAVBAR LOGO SIZE === */
 .navbar .navbar-logo {
-  height: 95px !important;           /* Try 85–100px to taste */
+  height: 95px !important;
   width: auto !important;
   max-height: none !important;
   object-fit: contain !important;
-  display: inline-block !important;
   margin-top: -10px !important;
   margin-bottom: -10px !important;
   margin-right: 12px !important;
@@ -722,7 +738,6 @@ body.home main.content {
   width: auto !important;
   max-height: none !important;
   object-fit: contain !important;
-  display: inline-block !important;
   margin-top: -10px !important;
   margin-bottom: -10px !important;
   margin-right: 12px !important;
@@ -1001,8 +1016,18 @@ body.projects h3 {
 
 /* Text content below images */
 .news-item-text {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1.25rem 1.5rem 1rem;
   border-top: 3px solid #293d58;
+}
+
+/* Remove any margins Quarto adds around the {=html} gallery block */
+.news-item > p:empty,
+.news-item .fieldwork-gallery {
+  margin: 0;
+}
+
+.news-item > div:last-child {
+  margin-bottom: 0;
 }
 
 .news-item-text p {
@@ -1104,6 +1129,57 @@ body.projects h3 {
   .news-preview-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* === FIELDWORK PHOTO/VIDEO GALLERY === */
+.fieldwork-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: #1a2d42;
+}
+
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Video spans full width at bottom */
+.gallery-item-video {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-item-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .fieldwork-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item-video { grid-column: span 2; }
 }
 
 /* === ACCESSIBILITY: RESPECT REDUCED MOTION === */
