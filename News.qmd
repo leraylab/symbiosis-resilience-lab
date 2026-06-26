@@ -9,6 +9,25 @@ toc-title: "Categories"
 ::::: news-item
 :::: news-item-images
 ::: news-field-photo
+![Riverine fish biodiversity assessed with environmental DNA](Images/P1012594.JPG)
+:::
+::: news-paper-thumb
+![Zhang et al. 2026 – Nature Ecology & Evolution](Images/Publications/Zhang et al 2026 Nat Ecol & Evol.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**A unified analysis of global riverine eDNA reveals common associations of fish biodiversity with drainage characteristics**
+
+Zhang Y, Zhang H, Akashi H, et al., Leray M, et al., Pellissier L, Zhang X, Altermatt F.\
+*Nature Ecology & Evolution* s41559-026-03106-1
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
 ![Coral reef fish skin microbiome study](Images/Prionurus_laticlavus-10.JPG)
 :::
 ::: news-paper-thumb

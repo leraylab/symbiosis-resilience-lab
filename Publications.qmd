@@ -5,7 +5,11 @@ toc: true           # enable table of contents
 
 ## 2026
 
-<ol reversed start="63">
+<ol reversed start="64">
+
+<li>
+
+Zhang Y, Zhang H, Akashi H, Albouy CP, Andres KJ, Barquín J, Brantschen J, Connon RE, Craine JM, Gleeson D, Goldenberg-Vilar A, González-Ferreras AM, Hatzenbuhler C, Hupało K, Hyde J, Iwasaki W, Johnson MD, Katz AD, Kuzovlev VV, Larson CE, Lecaudey LA, Leese F, Leray M, Li F, Macher T-H, Mauvisseau Q, Morán-Luis M, Nester G, Quintero H, Ravelomanana T, Chacko MR, Saccò M, Sales N, Schenekar T, Schletterer M, Schmidt S, Schulte NO, Schütz R, Sperry JH, Stevens ER, Stinson SA, Weiss S, Xia F, Zhang H, Zhang S, Zhong W, Zong S, Pellissier L, Zhang X, Altermatt F. 2026. *A unified analysis of global riverine eDNA reveals common associations of fish biodiversity with drainage characteristics.* **Nature Ecology & Evolution** s41559-026-03106-1
 
 <li>
 

@@ -41,6 +41,16 @@ The Symbiosis & Resilience Lab investigates how ecological interactions - from h
 :::: news-preview-grid
 
 ::: news-preview-card
+![](Images/Publications/Zhang et al 2026 Nat Ecol & Evol.png){.news-preview-img}
+
+[New Publication]{.badge-pub}
+
+**A unified analysis of global riverine eDNA reveals common associations of fish biodiversity with drainage characteristics**
+
+Zhang Y et al. · *Nature Ecology & Evolution* · 2026
+:::
+
+::: news-preview-card
 ![](Images/Publications/Lardinois et al. 2026 BMC.png){.news-preview-img}
 
 [New Publication]{.badge-pub}
@@ -58,16 +68,6 @@ Lardinois LL et al. · *BMC Microbiology* · 2026
 **Integrated reanalysis of global riverine fish eDNA datasets shows robustness and congruence of biodiversity conclusions**
 
 Zhang Y et al. · *Molecular Ecology* · 2026
-:::
-
-::: news-preview-card
-![](Images/Publications/Clever et al. 2026 JAE.png){.news-preview-img}
-
-[New Publication]{.badge-pub}
-
-**Dietary resilience of coral reef fishes to habitat degradation**
-
-Clever F et al. · *Journal of Animal Ecology* · 2026
 :::
 
 ::::
