@@ -24,6 +24,30 @@ Principal Investigator. Interested in marine biodiversity, symbiosis, and conser
 
 ------------------------------------------------------------------------
 
+## Postdoctoral Researchers
+
+:::: team-grid
+::: team-member
+![](Images/Leila-Ezzat.jpeg){width="200"}
+
+**Dr. Leila Ezzat**\
+Studying how stressors influence ecological interactions on coral reefs from micro to macro scales
+
+<a href="http://leilaezzat.com/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
+<a href="https://www.instagram.com/lay_eb/" target="_blank" rel="noopener">
+  <img src="Images/Instagram.png" width="25"/>
+</a>
+<a href="https://www.linkedin.com/in/le%C3%AFla-ezzat-547455a6?originalSubdomain=ch" target="_blank" rel="noopener">
+  <img src="Images/LinkedIn.png" width="25"/>
+</a>
+
+:::
+::::
+
+------------------------------------------------------------------------
+
 ## Graduate Students
 
 :::::::::: team-grid
@@ -140,6 +164,20 @@ PhD student studying the effects of local and global environmental stressors on 
 
 :::
 ::::::::::
+
+------------------------------------------------------------------------
+
+## Research Assistants
+
+:::: team-grid
+::: team-member
+![](Images/Xiaoya-April-Xie.jpg){width="200"}
+
+**Xiaoya (April) Xie**\
+Contributing to research on the mechanisms of coral reef resilience
+
+:::
+::::
 
 ------------------------------------------------------------------------
 
