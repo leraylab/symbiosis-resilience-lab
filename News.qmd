@@ -9,6 +9,25 @@ toc-title: "Categories"
 ::::: news-item
 :::: news-item-images
 ::: news-field-photo
+![Art and science for global coral reef action](Images/Science art.png)
+:::
+::: news-paper-thumb
+![Medina et al. 2026 – Science Advances](Images/Publications/Medina et al 2026 Sc Adv.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Communicating coral: Art and science for global reef action**
+
+Medina M, Ben-Zvi O, Levy O, et al., Leray M, et al.\
+*Science Advances* 12, eaej6847
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
 ![Riverine fish biodiversity assessed with environmental DNA](Images/P1012594.JPG)
 :::
 ::: news-paper-thumb

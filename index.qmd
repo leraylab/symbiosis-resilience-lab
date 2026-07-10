@@ -41,6 +41,16 @@ The Symbiosis & Resilience Lab investigates how ecological interactions - from h
 :::: news-preview-grid
 
 ::: news-preview-card
+![](Images/Publications/Medina et al 2026 Sc Adv.png){.news-preview-img}
+
+[New Publication]{.badge-pub}
+
+**Communicating coral: Art and science for global reef action**
+
+Medina M et al. · *Science Advances* · 2026
+:::
+
+::: news-preview-card
 ![](Images/Publications/Zhang et al 2026 Nat Ecol & Evol.png){.news-preview-img}
 
 [New Publication]{.badge-pub}
@@ -58,16 +68,6 @@ Zhang Y et al. · *Nature Ecology & Evolution* · 2026
 **Host matters: coral reef fish species show distinct skin microbiome responses to upwelling-driven environmental changes**
 
 Lardinois LL et al. · *BMC Microbiology* · 2026
-:::
-
-::: news-preview-card
-![](Images/Publications/Zhang et al 2026 Mol Ecol.png){.news-preview-img}
-
-[New Publication]{.badge-pub}
-
-**Integrated reanalysis of global riverine fish eDNA datasets shows robustness and congruence of biodiversity conclusions**
-
-Zhang Y et al. · *Molecular Ecology* · 2026
 :::
 
 ::::

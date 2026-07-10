@@ -5,7 +5,11 @@ toc: true           # enable table of contents
 
 ## 2026
 
-<ol reversed start="64">
+<ol reversed start="65">
+
+<li>
+
+Medina M, Ben-Zvi O, Levy O, Aburto-Oropeza O, Angell J, Baker D, Barotti M, Barragão V, Berwald J, Buitrago H, Caminos X, Camp E, Carvajal L, Chen CA, Chen BB, Cheung A, Claudet J, Cole T, Cresswell I, Darling ES, Davy S, Earle S, Ferrier-Pagès C, Flanders A, Gianelli I, Gueta T, Hoegh-Guldberg O, Huang D, Jacanamijoy C, Jupiter S, Keith I, Kit N, Kitano H, Knowlton N, Kolijn E, Leray M, Li V, Lomask J, López-Victoria M, Mattison C, Mittermeier C, Mouquet N, Obura D, Pereira L, Ritchie K, Solomon W, Sunagawa S, Sweet M, Tapilatu Y, Tarazi E, Thompson F, Yip Tong K. 2026. *Communicating coral: Art and science for global reef action.* **Science Advances** 12, eaej6847
 
 <li>
 
