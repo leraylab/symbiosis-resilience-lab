@@ -12,7 +12,7 @@ toc-title: "Categories"
 ![Hamlet reef fish (Hypoplectrus) in the Caribbean](Images/Hamlet.jpeg)
 :::
 ::: news-paper-thumb
-![Abdelghany et al. 2026 – PLoS Genetics](Images/Publications/Abdelghany et al. 2026 PLoS Genetics.png)
+![Abdelghany et al. 2026 – PLoS Genetics](Images/Publications/Abdelghany et al. 2026 PLoS Genetics front page.png)
 :::
 ::::
 :::: news-item-text
