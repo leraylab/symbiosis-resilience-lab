@@ -41,6 +41,16 @@ The Symbiosis & Resilience Lab investigates how ecological interactions - from h
 :::: news-preview-grid
 
 ::: news-preview-card
+![](Images/Publications/Abdelghany et al. 2026 PLoS Genetics.png){.news-preview-img}
+
+[New Publication]{.badge-pub}
+
+**Proteobacteria with chemosynthetic potential are highly prevalent in the gills of Hypoplectrus reef fishes**
+
+Abdelghany S et al. · *PLoS Genetics* · 2026
+:::
+
+::: news-preview-card
 ![](Images/Publications/Medina et al 2026 Sc Adv.png){.news-preview-img}
 
 [New Publication]{.badge-pub}
@@ -58,16 +68,6 @@ Medina M et al. · *Science Advances* · 2026
 **A unified analysis of global riverine eDNA reveals common associations of fish biodiversity with drainage characteristics**
 
 Zhang Y et al. · *Nature Ecology & Evolution* · 2026
-:::
-
-::: news-preview-card
-![](Images/Publications/Lardinois et al. 2026 BMC.png){.news-preview-img}
-
-[New Publication]{.badge-pub}
-
-**Host matters: coral reef fish species show distinct skin microbiome responses to upwelling-driven environmental changes**
-
-Lardinois LL et al. · *BMC Microbiology* · 2026
 :::
 
 ::::

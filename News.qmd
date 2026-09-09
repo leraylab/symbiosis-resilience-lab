@@ -9,6 +9,25 @@ toc-title: "Categories"
 ::::: news-item
 :::: news-item-images
 ::: news-field-photo
+![Hamlet reef fish (Hypoplectrus) in the Caribbean](Images/Hamlet.jpeg)
+:::
+::: news-paper-thumb
+![Abdelghany et al. 2026 – PLoS Genetics](Images/Publications/Abdelghany et al. 2026 PLoS Genetics.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Proteobacteria with chemosynthetic potential are highly prevalent in the gills of Hypoplectrus reef fishes**
+
+Abdelghany S, Helmkampf M, Schechter MS, Veseli IA, Leray M, Eren AM, Puebla O.\
+*PLoS Genetics* 22, e1012266
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
 ![Art and science for global coral reef action](Images/Science art.png)
 :::
 ::: news-paper-thumb

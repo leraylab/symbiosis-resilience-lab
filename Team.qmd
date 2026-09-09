@@ -167,7 +167,7 @@ PhD student studying the effects of local and global environmental stressors on 
 
 ------------------------------------------------------------------------
 
-## Research Assistants
+## Research & Technical Assistants
 
 :::: team-grid
 ::: team-member
@@ -175,6 +175,18 @@ PhD student studying the effects of local and global environmental stressors on 
 
 **Xiaoya (April) Xie**\
 Contributing to research on the mechanisms of coral reef resilience
+
+:::
+
+::: team-member
+![](Images/PakHei.jpeg){width="200"}
+
+**Pak Hei Chan**\
+Provide general assistance with laboratory research
+
+<a href="https://www.biosch.hku.hk/support-staff/" target="_blank" rel="noopener">
+  <img src="Images/Personal-site.png" width="25"/>
+</a>
 
 :::
 ::::

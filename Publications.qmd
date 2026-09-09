@@ -5,7 +5,11 @@ toc: true           # enable table of contents
 
 ## 2026
 
-<ol reversed start="65">
+<ol reversed start="66">
+
+<li>
+
+Abdelghany S, Helmkampf M, Schechter MS, Veseli IA, Leray M, Eren AM, Puebla O. 2026. *Proteobacteria with chemosynthetic potential are highly prevalent in the gills of Hypoplectrus reef fishes.* **PLoS Genetics** 22, e1012266
 
 <li>
 
