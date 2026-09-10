@@ -145,7 +145,7 @@ Connelly MT, Glynn VM, Cornejo A, Villalobos-Cubero T, Kleypas J, Alvarado JJ, B
 ![Crustacean diversity in the Salish Sea](Images/Trapezia-3.JPG)
 :::
 ::: news-paper-thumb
-![Hultgren et al. 2025 – Marine Biodiversity](Images/Trapezia-3.JPG)
+![Hultgren et al. 2025 – Marine Biodiversity](Images/Publications/Hultgren et al 2025 Marine Biodiversity.png)
 :::
 ::::
 :::: news-item-text
@@ -221,7 +221,7 @@ Glynn VM, Fernandes de Barros Marangoni L, Guglielmetti M, Tapia ER, Ali V, Quin
 ![Chemosynthetic symbiosis in marine invertebrates](Images/Escudo-worm.JPG)
 :::
 ::: news-paper-thumb
-![Morel-Letelier et al. 2025 – MSystems](Images/Escudo-worm.JPG)
+![Morel-Letelier et al. 2025 – MSystems](Images/Publications/Morel-Letelier et al 2025 mSystems.png)
 :::
 ::::
 :::: news-item-text
