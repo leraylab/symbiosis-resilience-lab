@@ -9,6 +9,25 @@ toc-title: "Categories"
 ::::: news-item
 :::: news-item-images
 ::: news-field-photo
+![Coiba Islands, Tropical Eastern Pacific](Images/Coiba_eDNA.jpg)
+:::
+::: news-paper-thumb
+![Leray et al. 2026 – Global Change Biology](Images/Publications/Leray et al 2026 GCB 2.png)
+:::
+::::
+:::: news-item-text
+[New Publication]{.badge-pub} · 2026
+
+**Seeing species where they are not: why eDNA needs better taxonomic standards**
+
+Leray M, Victor BC, Jeunen GJ, Robertson DR.\
+*Global Change Biology* 32, e71133
+::::
+:::::
+
+::::: news-item
+:::: news-item-images
+::: news-field-photo
 ![Hamlet reef fish (Hypoplectrus) in the Caribbean](Images/Hamlet.jpeg)
 :::
 ::: news-paper-thumb

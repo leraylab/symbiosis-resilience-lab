@@ -5,7 +5,11 @@ toc: true           # enable table of contents
 
 ## 2026
 
-<ol reversed start="66">
+<ol reversed start="67">
+
+<li>
+
+Leray M, Victor BC, Jeunen GJ, Robertson DR. 2026. *Seeing species where they are not: why eDNA needs better taxonomic standards.* **Global Change Biology** 32, e71133
 
 <li>
 

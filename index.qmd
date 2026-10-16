@@ -41,6 +41,16 @@ The Symbiosis & Resilience Lab investigates how ecological interactions - from h
 :::: news-preview-grid
 
 ::: news-preview-card
+![](Images/Publications/Leray et al 2026 GCB 2.png){.news-preview-img}
+
+[New Publication]{.badge-pub}
+
+**Seeing species where they are not: why eDNA needs better taxonomic standards**
+
+Leray M et al. · *Global Change Biology* · 2026
+:::
+
+::: news-preview-card
 ![](Images/Publications/Abdelghany et al. 2026 PLoS Genetics.png){.news-preview-img}
 
 [New Publication]{.badge-pub}
